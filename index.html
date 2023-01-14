@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/619ba43be5.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Formulario/Assets/CSS.css">
+  <link rel="shortcut icon" href="./Formulario/Assets/logo favicon.png">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <table class="table table-bordered">
+    <tr>
+      <th rowspan="3" scope="col">
+        <img src="./Formulario/Assets/logotipo_h®.png" alt="Logo corporativo" width="22%">
+        <span class="Titulo">FORMATO EVALUACIÓN DE DESEMPEÑO LABORAL CON PERSONAL A CARGO</span>
+      </th>
+      <th>
+        Codigo
+      </th>
+      <th>GH-PR005-F002</th>
+    </tr>
+
+    <tr>
+      <th>
+        Versión
+      </th>
+      <th>
+        004
+      </th>
+    </tr>
+
+    <tr>
+      <th>Fecha</th>
+      <th>11/01/2022</th>
+    </tr>
+  </table>
+  <!-- Contenido -->
+  <div class="container">
+    <div class="row">
+      <div class="col">Periodo a evaluar: XXXX</div>
+      <div class="col" id="FechaActual">Fecha de evaluación: </div>
+      <div class="col">Fecha de ultima evaluación: XXXX</div>
+    </div>
+    <div class="row">
+      <div class="col">Nombre del evaluado: YYYY</div>
+      <div class="col">cédula: XXXX</div>
+      <div class="col">Fecha de Ingreso: XXXX</div>
+      <div class="col">Cargo: YYYY</div>
+    </div>
+    <div class="row">
+      <div class="col">Nombre del evaluador: YYYY</div>
+      <div class="col">cédula: XXXX</div>
+      <div class="col">Fecha de Ingreso: XXXX</div>
+      <div class="col">Cargo: YYYY</div>
+    </div>
+  </div>
+  <form class="container" method="post" name="Formulario" id="Guardar">
+    <!-- Razón de la evaluación -->
+    <div class="row">
+      <div class="col">Razón de la evaluacion: </div>
+      <label class="col" for="Semestral">Semestral
+        <input name="Tiempo" type="radio" value="Semestral"></label>
+      <label class="col" for="Ascenso">Ascenso
+        <input name="Tiempo" type="radio" value="Ascenso"></label>
+      <label class="col" for="Salario">Aumento de salario
+        <input name="Tiempo" type="radio" value="Salario"></label>
+      <div class="centro h4" id="Criterios"> CRITERIOS DE EVALUACIÓN (50%)</div>
+    </div>
+    <!-- Encuesta -->
+    <div id="Pregunta_1" hidden>
+      <div class="row">
+        <div class="h5 centro">CALIDAD DEL TRABAJO</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Supervisa y corrige el trabajo del equipo, anticipándose ante errores o fallas.</div>
+        <div class="col-2"><input checked name="1-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="1-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="1-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="1-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="1-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Posee amplios conocimientos del mercado, el negocio, su área y lo comparte con su
+          equipo.</div>
+        <div class="col-2"><input checked name="1-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="1-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="1-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="1-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="1-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Elabora e implementa soluciones prácticas y operables en pro del logro de los
+          objetivos.
+        </div>
+        <div class="col-2"><input checked name="1-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="1-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="1-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="1-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="1-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Sus reportes, trabajos y proyectos se destacan por ser impecables.
+        </div>
+        <div class="col-2"><input checked name="1-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="1-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="1-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="1-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="1-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Realiza constantes propuestas de mejoramiento.
+        </div>
+        <div class="col-2"><input checked name="1-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="1-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="1-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="1-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="1-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio1"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <!-- 2da ronda de preguntas -->
+    <div id="Pregunta_2" hidden>
+      <div class="row">
+        <div class="h5 centro">COMUNICACIÓN</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Comparte información relevante con sus colaboradores y con otras áreas de la
+          organización.</div>
+        <div class="col-2"><input checked name="2-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="2-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="2-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="2-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="2-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Escucha a los demás con empatía ocupándose en entender sus puntos de vista.</div>
+        <div class="col-2"><input name="2-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="2-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="2-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="2-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="2-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Ofrece retroalimentación para ayudar a sus colaboradores y pares a actuar de forma
+          exitosa.</div>
+        <div class="col-2"><input name="2-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="2-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="2-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="2-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="2-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Tiene influencia sobre los demás para cambiar sus ideas y acciones, basándose en
+          aportes
+          positivos.</div>
+        <div class="col-2"><input name="2-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="2-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="2-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input checked name="2-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="2-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Maneja las reglas adecuadas del lenguaje, gramática y sintaxis para transmitir sus
+          ideas.</div>
+        <div class="col-2"><input name="2-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="2-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="2-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input checked name="2-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="2-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio2"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <!-- 3ra ronda de preguntas -->
+    <div id="Pregunta_3" hidden>
+      <div class="row">
+        <div class="h5 centro">COMPROMISO</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Monitorea el logro de los objetivos e implementa acciones correctivas.</div>
+        <div class="col-2"><input name="3-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="3-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="3-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="3-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="3-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Define y se identifica claramente con la visión de la organización y la transmite a su
+          equipo</div>
+        <div class="col-2"><input name="3-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="3-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="3-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="3-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="3-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Transmite a pares y supervisados los objetivos, generando compromiso e identificación
+        </div>
+        <div class="col-2"><input checked name="3-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="3-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="3-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="3-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="3-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Reconoce el esfuerzo de sus colaboradores, a fin de mantener la motivación y el
+          compromiso</div>
+        <div class="col-2"><input name="3-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="3-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="3-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input checked name="3-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="3-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Es prudente en el manejo de la información y los asuntos a su cargo.</div>
+        <div class="col-2"><input name="3-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="3-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="3-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="3-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="3-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio3"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <!-- 4ta ronda de preguntas -->
+    <div id="Pregunta_4" hidden>
+      <div class="row">
+        <div class="h5 centro">ORIENTACIÓN AL CLIENTE</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Es paciente y tolerante con sus clientes, aun en situaciones complejas.</div>
+        <div class="col-2"><input name="4-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="4-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="4-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="4-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="4-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Indaga y se informa sobre necesidades actuales y potenciales de sus clientes.</div>
+        <div class="col-2"><input name="4-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="4-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="4-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="4-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="4-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Planifica sus acciones y las de su equipo considerando las necesidades de los
+          clientes.
+        </div>
+        <div class="col-2"><input name="4-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="4-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="4-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="4-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="4-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Genera ambientes y procesos de trabajo que cuidan y atienden al cliente.</div>
+        <div class="col-2"><input name="4-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="4-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="4-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="4-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="4-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Se esfuerza por ofrecer un excelente servicio.</div>
+        <div class="col-2"><input name="4-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="4-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="4-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="4-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="4-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio4"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <!-- 5ta ronda de preguntas -->
+    <div id="Pregunta_5" hidden>
+      <div class="row">
+        <div class="h5 centro">INICIATIVA E INNOVACIÓN</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Es participativo, aporta ideas y estimula a su gente para que actúe de la misma forma.
+        </div>
+        <div class="col-2"><input name="5-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="5-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="5-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="5-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="5-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Da ejemplo con su actitud y toma iniciativas para la mejora y la eficiencia.</div>
+        <div class="col-2"><input name="5-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input checked name="5-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="5-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="5-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="5-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Idea y lleva a cabo soluciones novedosas para resolver problemas.</div>
+        <div class="col-2"><input name="5-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="5-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="5-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="5-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="5-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Le gusta estar informado y aprender para aplicar estos conocimientos si tiene
+          oportunidad.</div>
+        <div class="col-2"><input checked name="5-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="5-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="5-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="5-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="5-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Muestra interés para solucionar los errores cometidos por el o por sus compañeros.
+        </div>
+        <div class="col-2"><input name="5-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="5-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="5-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="5-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="5-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio5"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <!-- 6ta ronda de preguntas -->
+    <div id="Pregunta_6" hidden>
+      <div class="row">
+        <div class="h5 centro">TRABAJO EN EQUIPO Y RELACIONES INTERPERSONALES</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Actúa para generar un ambiente de trabajo amistoso, de buen clima y cooperación.
+        </div>
+        <div class="col-2"><input name="6-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="6-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="6-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="6-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="6-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Valora y promueve el trabajo en equipo.</div>
+        <div class="col-2"><input name="6-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="6-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="6-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="6-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="6-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Implementa modalidades alternativas de trabajo en equipo, a fin de añadir valor a los
+          resultados.</div>
+        <div class="col-2"><input name="6-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="6-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="6-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="6-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="6-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Logra la cooperación de las personas involucradas directa o indirectamente con su
+          área.
+        </div>
+        <div class="col-2"><input name="6-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="6-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="6-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="6-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="6-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Motiva al equipo a integrar sus ideas y llegar a consensos.</div>
+        <div class="col-2"><input name="6-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="6-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="6-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="6-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="6-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio6"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <!-- 7ma ronda de preguntas -->
+    <div id="Pregunta_7" hidden>
+      <div class="row">
+        <div class="h5 centro">LIDERAZGO</div>
+        <div class="col-2"></div>
+        <div class="col-2">Insuficiente</div>
+        <div class="col-2">En observación</div>
+        <div class="col-2">Bueno</div>
+        <div class="col-2">Muy bueno</div>
+        <div class="col-2">Excelente</div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Hace uso de su autoridad de forma justa y equitativa.
+        </div>
+        <div class="col-2"><input name="7-1" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="7-1" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="7-1" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="7-1" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input checked name="7-1" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Reconoce a los empleados con potencial, creando oportunidades para ellos.</div>
+        <div class="col-2"><input name="7-2" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="7-2" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input checked name="7-2" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="7-2" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="7-2" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Realiza un apropiado seguimiento de las tareas, brindando feedback a sus
+          colaboradores.
+        </div>
+        <div class="col-2"><input checked name="7-3" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="7-3" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="7-3" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input name="7-3" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="7-3" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Motiva y establece un clima de confianza, generando entusiasmo y compromiso en su
+          equipo.
+        </div>
+        <div class="col-2"><input name="7-4" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="7-4" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="7-4" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input checked name="7-4" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="7-4" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="col pregunta">Guía de manera efectiva al equipo de trabajo para cumplir con los objetivos.</div>
+        <div class="col-2"><input name="7-5" type="radio" id="Encuesta" value="1"></div>
+        <div class="col-2"><input name="7-5" type="radio" id="Encuesta" value="2"></div>
+        <div class="col-2"><input name="7-5" type="radio" id="Encuesta" value="3"></div>
+        <div class="col-2"><input checked name="7-5" type="radio" id="Encuesta" value="4"></div>
+        <div class="col-2"><input name="7-5" type="radio" id="Encuesta" value="5"></div>
+      </div>
+      <div class="row">
+        <div class="centro" id="Promedio7"><!-- Aqui va el promedio --></div>
+      </div>
+    </div>
+    <div id="Pregunta_8" hidden>
+      <div class="centro h4"> EVALUACIÓN DE OBJETIVOS (50%)</div>
+      <div class="row">
+        <div class="col-5">DESCRIPCIÓN DE OBJETIVOS</div>
+        <div class="col">META</div>
+        <div class="col">RESULTADO</div>
+        <div class="col">CALIFICACIÓN</div>
+        <div class="col"></div>
+      </div>
+      <div id="FilaObjetivos" class="row">
+      </div>
+      <button type="button" id="NuevaFila" class="btn btn-secondary"><i class="fa-solid fa-plus"></i></button><br>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+    <button id="anterior" hidden class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i></button>
+    <button id="Siguiente" class="btn btn-secondary"><i class="fa-solid fa-arrow-right"></i></button>
+  </form>
+
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./Formulario/JS.js"></script>
+
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+}
+img {
+  height: auto;
+}
+body {
+  font-family: 'Open Sans';
+}
+.Titulo {
+  text-align: center;
+  font-size: 130%;
+}
+.centro{
+  text-align: center;
+  vertical-align: middle;
+}
+.pregunta {
+  text-align: justify;
+  width: 100%;
+    padding: none
+}
+input{
+  margin: 0px;
+  padding: none;
+  width: 90%;
+  margin-left: 0px;
+}
+.col-2 {
+  margin: none;
+    padding: none;
+}
+input[type="radio"] {
+  margin: none;
+  padding: none;
+}
