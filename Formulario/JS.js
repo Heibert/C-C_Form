@@ -1,8 +1,8 @@
 'use strict'
-//Colocar la fecha Actual
+/* //Colocar la fecha Actual
 var fechaA = new Date
 document.getElementById("FechaActual").innerHTML =
-  "Fecha de evaluación: " + fechaA.getDate() + "/" + fechaA.getMonth() + 1 + "/" + fechaA.getFullYear()
+  "Fecha de evaluación: " + fechaA.getDate() + "/" + fechaA.getMonth() + 1 + "/" + fechaA.getFullYear() */
 /* Evento para recibir los datos */
 window.addEventListener('load', function (e) {
   MostrarS(e)

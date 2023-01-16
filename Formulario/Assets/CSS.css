@@ -1,36 +1,43 @@
 body {
-  background-color: white;
+    background-color: white;
 }
 img {
-  height: auto;
+    height: auto;
 }
 body {
-  font-family: 'Open Sans';
+    font-family: "Open Sans";
 }
 .Titulo {
-  text-align: center;
-  font-size: 130%;
+    text-align: center;
+    font-size: 130%;
 }
-.centro{
-  text-align: center;
-  vertical-align: middle;
+.centro {
+    text-align: center;
+    vertical-align: middle;
 }
 .pregunta {
-  text-align: justify;
-  width: 100%;
-    padding: none
+    text-align: justify;
+    padding: none;
 }
-input{
-  margin: 0px;
-  padding: none;
-  width: 90%;
-  margin-left: 0px;
+input {
+    margin: 0px;
+    padding: none;
+    width: 90%;
+    margin-left: 0px;
 }
 .col-2 {
-  margin: none;
+    margin: none;
     padding: none;
 }
 input[type="radio"] {
-  margin: none;
-  padding: none;
+    margin: none;
+    padding: none;
+}
+
+.rounded {
+    border-radius: 30px !important;
+}
+
+.bg-primary {
+    background-color: #5bcce8 !important;
 }
