@@ -219,7 +219,7 @@ function CrearFila() {
   //Contenedores de las filas
   var Fila = document.getElementById("FilaObjetivos")
   let nFila = document.createElement("div")
-  nFila.setAttribute("class", "row")
+  nFila.setAttribute("class", "row pb-3")
   nFila.setAttribute("id", `fila_${campos}`)
   //Input de objetivos
   var divT = document.createElement("div")
@@ -228,6 +228,7 @@ function CrearFila() {
   inputT.setAttribute("type", "text")
   inputT.setAttribute("id", `Objetivo_${campos}`)
   inputT.setAttribute("required", '')
+  inputT.setAttribute('class' , 'form-control')
   divT.appendChild(inputT)
 	nFila.append(divT)
   Fila.append(nFila)
@@ -238,6 +239,8 @@ function CrearFila() {
   inputN.setAttribute('type', 'number')
   inputN.setAttribute("required", '')
   inputN.setAttribute('id', `meta_${campos}`)
+  inputN.setAttribute('class' , 'form-control')
+
   divN.appendChild(inputN)
   nFila.append(divN)
   Fila.append(nFila)
@@ -248,6 +251,7 @@ function CrearFila() {
   inputNR.setAttribute('type', 'number')
   inputNR.setAttribute('id', `resultado_${campos}`)
   inputNR.setAttribute("required", '')
+  inputNR.setAttribute('class' , 'form-control')
   divNR.appendChild(inputNR)
   nFila.append(divNR)
   Fila.append(nFila)

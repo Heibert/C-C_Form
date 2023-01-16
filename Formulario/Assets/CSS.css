@@ -6,6 +6,7 @@ img {
 }
 body {
     font-family: "Open Sans";
+    font-size: 18px;
 }
 .Titulo {
     text-align: center;
@@ -40,4 +41,14 @@ input[type="radio"] {
 
 .bg-primary {
     background-color: #5bcce8 !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.iconArrow {
+    width: 250px !important;
 }
