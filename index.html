@@ -33,24 +33,30 @@
       <!-- Encuesta -->
       <div id="Pregunta_1" hidden>
         <div class="h5 centro">CALIDAD DEL TRABAJO</div>
-        <div class="form-floating">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
-            <option selected>Selecione una opcion por favor</option>
-            <option value="Semestral">Semestral</option>
-            <option value="Ascenso">Ascenso</option>
-            <option value="Salario">Aumento de salario</option>
-          </select>
-          <label for="floatingSelect">Razon de la evaluacion:</label>
-        </div>
+        <div class="row pt-3">
 
-        <div class="pt-3">
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Selecione una opcion por favor</option>
-              <option value="">Usuario</option>
-            </select>
-            <label for="floatingSelect">Usuario</label>
+          <div class="col-4 text-start">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected>Selecione una opcion por favor</option>
+                <option value="">Usuario</option>
+              </select>
+              <label for="floatingSelect">Usuario:</label>
+            </div>
           </div>
+
+          <div class="col-4 text-start">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Selecione una opcion por favor</option>
+                <option value="Semestral">Semestral</option>
+                <option value="Ascenso">Ascenso</option>
+                <option value="Salario">Aumento de salario</option>
+              </select>
+              <label for="floatingSelect">Razon de la evaluacion:</label>
+            </div>
+          </div>
+
         </div>
 
         <div class="row">
@@ -62,7 +68,7 @@
           <div class="row-1">
             <div class="d-flex">
               <input name="1-1" class="form-check-input" type="radio" id="Encuesta" value="2">
-              <div class="ps-3">En observación</div>
+              <p class="ps-3 m-0">En observación</p>
             </div>
           </div>
           <div class="row-1 d-flex">
@@ -962,7 +968,7 @@
         </div>
 
         <div class="p-3">
-          <h5 class="text-center">DESARROLLO PERSONAL</h5>
+          <h5 class="text-center">DESARROLLO DE PERSONAL</h5>
           <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" style="height: 250px"
               id="floatingTextarea" required></textarea>

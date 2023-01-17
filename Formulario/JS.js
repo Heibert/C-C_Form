@@ -12,7 +12,7 @@ window.addEventListener('load', function (e) {
   this.document.getElementById("anterior").addEventListener("click", (e) => { MostrarA(e) })
 })
 //Mostrar la seccion de pregunta
-var pagina = 7
+var pagina = 0
 var botonS = document.getElementById("Siguiente")
 var botonA = document.getElementById("anterior")
 function MostrarS(e) {
@@ -322,3 +322,6 @@ function CrearFila() {
   }
 }
 CrearFila()
+
+
+// Crear 
