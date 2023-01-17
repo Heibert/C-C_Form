@@ -12,7 +12,7 @@ window.addEventListener('load', function (e) {
   this.document.getElementById("anterior").addEventListener("click", (e) => { MostrarA(e) })
 })
 //Mostrar la seccion de pregunta
-var pagina = 0
+var pagina = 7
 var botonS = document.getElementById("Siguiente")
 var botonA = document.getElementById("anterior")
 function MostrarS(e) {
@@ -176,7 +176,7 @@ function Calificacion(nPregunta) {
   var Meta = document.getElementById(`meta_${nPregunta}`).value
   let Calificacion = Resultado / Meta
   var TextoC = document.getElementById(`Calificacion_${nPregunta}`)
-  TextoC.setAttribute("class", "col")
+  TextoC.setAttribute("class", "col text-center")
   //Asignar una ponderacion a los objetivos
   if (Calificacion >= 1.5) {
     nCalificacion = 5
@@ -219,7 +219,7 @@ function CrearFila() {
   //Contenedores de las filas
   var Fila = document.getElementById("FilaObjetivos")
   let nFila = document.createElement("div")
-  nFila.setAttribute("class", "row pb-3")
+  nFila.setAttribute("class", "row py-2")
   nFila.setAttribute("id", `fila_${campos}`)
   //Input de objetivos
   var divT = document.createElement("div")

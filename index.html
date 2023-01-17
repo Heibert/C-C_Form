@@ -31,35 +31,34 @@
         <div class="centro h4" id="Criterios"> CRITERIOS DE EVALUACIÓN (50%)</div>
       </div>
       <!-- Encuesta -->
+      <div class="h5 centro">CALIDAD DEL TRABAJO</div>
       <div id="Pregunta_1" hidden>
-        <div class="row">
-          <div class="h5 centro">CALIDAD DEL TRABAJO</div>
-          <div class="row">
-            <div class="row p-3">Razón de la evaluacion: </div>
-            <div>
-              <input name="Tiempo" class="form-check-input" type="radio" value="Semestral"></label>
-              <label class="col" for="Semestral">Semestral
-            </div>
-            <div>
-              <input name="Tiempo" class="form-check-input" type="radio" value="Ascenso"></label>
-              <label class="col" for="Ascenso">Ascenso
-            </div>
-            <div>
-              <input name="Tiempo" class="form-check-input" type="radio" value="Salario"></label>
-              <label class="col" for="Salario">Aumento de salario
-            </div>
-          </div>
-          <!-- <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div> -->
+
+
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+            <option selected>Selecione una opcion por favor</option>
+            <option value="Semestral">Semestral</option>
+            <option value="Ascenso">Ascenso</option>
+            <option value="Salario">Aumento de salario</option>
+          </select>
+          <label for="floatingSelect">Razon de la evaluacion:</label>
         </div>
+
+        <div class="pt-3">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Selecione una opcion por favor</option>
+              <option value="">Usuario</option>
+            </select>
+            <label for="floatingSelect">Usuario</label>
+          </div>
+        </div>
+
         <div class="row">
           <div class="row p-3">Supervisa y corrige el trabajo del equipo, anticipándose ante errores o fallas.</div>
           <div class="row-1 d-flex">
-            <input checked name="1-1" class="form-check-input" type="radio" id="Encuesta" value="1">
+            <input checked name="1-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
             <div class="ps-3">Insuficiente</div>
           </div>
           <div class="row-1">
@@ -87,7 +86,7 @@
           <div class="row p-3">Posee amplios conocimientos del mercado, el negocio, su área y lo comparte con su
             equipo.</div>
           <div class="row-1 d-flex">
-            <input checked name="1-2" class="form-check-input" type="radio" id="Encuesta" value="1">
+            <input checked name="1-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
             <div class="ps-3">Insuficiente</div>
           </div>
           <div class="row-1 d-flex">
@@ -112,7 +111,7 @@
             objetivos.
           </div>
           <div class="row-1 d-flex">
-            <input checked name="1-3" class="form-check-input" type="radio" id="Encuesta" value="1">
+            <input checked name="1-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
             <div class="ps-3">Insuficiente</div>
           </div>
           <div class="row-1 d-flex">
@@ -136,7 +135,7 @@
           <div class="row p-3">Sus reportes, trabajos y proyectos se destacan por ser impecables.
           </div>
           <div class="row-1 d-flex">
-            <input checked name="1-4" class="form-check-input" type="radio" id="Encuesta" value="1">
+            <input checked name="1-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
             <div class="ps-3">Insuficiente</div>
           </div>
           <div class="row-1 d-flex">
@@ -160,7 +159,7 @@
           <div class="row p-3">Realiza constantes propuestas de mejoramiento.
           </div>
           <div class="row-1 d-flex">
-            <input checked name="1-5" class="form-check-input" type="radio" id="Encuesta" value="1">
+            <input checked name="1-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
             <div class="ps-3">Insuficiente</div>
           </div>
           <div class="row-1 d-flex">
@@ -187,63 +186,124 @@
       <!-- 2da ronda de preguntas -->
       <div id="Pregunta_2" hidden>
         <div class="row">
-          <div class="h5 centro">COMUNICACIÓN</div>
-          <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div>
-        </div>
-        <div class="row">
-          <div class="col pregunta">Comparte información relevante con sus colaboradores y con otras áreas de la
+          <div class="row p-3">Comparte información relevante con sus colaboradores y con otras áreas de la
             organización.</div>
-          <div class="col-2"><input checked name="2-1" class="form-check-input" type="radio" id="Encuesta" value="1">
+          <div class="row-1 d-flex">
+            <input checked name="2-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observación</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Escucha a los demás con empatía ocupándose en entender sus puntos de vista.</div>
-          <div class="col-2"><input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="2-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row p-3">Escucha a los demás con empatía ocupándose en entender sus puntos de vista.</div>
+          <div class="row-1 d-flex">
+            <input name="2-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observación</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="2-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Ofrece retroalimentación para ayudar a sus colaboradores y pares a actuar de forma
+          <div class="row p-3">Ofrece retroalimentación para ayudar a sus colaboradores y pares a actuar de forma
             exitosa.</div>
-          <div class="col-2"><input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="2-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row-1 d-flex">
+            <input name="2-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observación</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="2-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Tiene influencia sobre los demás para cambiar sus ideas y acciones, basándose en
+          <div class="row p-3">Tiene influencia sobre los demás para cambiar sus ideas y acciones, basándose en
             aportes
             positivos.</div>
-          <div class="col-2"><input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input checked name="2-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+          <div class="row-1 d-flex">
+            <input name="2-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observación</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="2-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Maneja las reglas adecuadas del lenguaje, gramática y sintaxis para transmitir sus
+          <div class="row p-3">Maneja las reglas adecuadas del lenguaje, gramática y sintaxis para transmitir sus
             ideas.</div>
-          <div class="col-2"><input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input checked name="2-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+          <div class="row-1 d-flex">
+            <input name="2-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observación</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="2-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="2-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
           <div class="centro" id="Promedio2"><!-- Aqui va el promedio --></div>
@@ -252,62 +312,122 @@
       <!-- 3ra ronda de preguntas -->
       <div id="Pregunta_3" hidden>
         <div class="row">
-          <div class="h5 centro">COMPROMISO</div>
-          <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div>
-        </div>
-        <div class="row">
-          <div class="col pregunta">Monitorea el logro de los objetivos e implementa acciones correctivas.</div>
-          <div class="col-2"><input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="3-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row p-3">Monitorea el logro de los objetivos e implementa acciones correctivas.</div>
+          <div class="row-1 d-flex">
+            <input name="3-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
-        </div>
-        <div class="row">
-          <div class="col pregunta">Define y se identifica claramente con la visión de la organización y la transmite a
-            su
-            equipo</div>
-          <div class="col-2"><input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="3-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row-1 d-flex">
+            <input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observación</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="3-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Transmite a pares y supervisados los objetivos, generando compromiso e
+          <div class="row p-3">Define y se identifica claramente con la visión de la organización y la transmite a
+            su equipo</div>
+          <div class="row-1 d-flex">
+            <input name="3-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-2" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="3-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row p-3">Transmite a pares y supervisados los objetivos, generando compromiso e
             identificación
           </div>
-          <div class="col-2"><input checked name="3-3" class="form-check-input" type="radio" id="Encuesta" value="1">
+          <div class="row-1 d-flex">
+            <input checked name="3-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Reconoce el esfuerzo de sus colaboradores, a fin de mantener la motivación y el
+          <div class="row p-3">Reconoce el esfuerzo de sus colaboradores, a fin de mantener la motivación y el
             compromiso</div>
-          <div class="col-2"><input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input checked name="3-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+          <div class="row-1 d-flex">
+            <input name="3-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="3-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Es prudente en el manejo de la información y los asuntos a su cargo.</div>
-          <div class="col-2"><input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="3-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row p-3">Es prudente en el manejo de la información y los asuntos a su cargo.</div>
+          <div class="row-1 d-flex">
+            <input name="3-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="3-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="3-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
@@ -318,58 +438,122 @@
       <div id="Pregunta_4" hidden>
         <div class="row">
           <div class="h5 centro">ORIENTACIÓN AL CLIENTE</div>
-          <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div>
         </div>
         <div class="row">
-          <div class="col pregunta">Es paciente y tolerante con sus clientes, aun en situaciones complejas.</div>
-          <div class="col-2"><input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="4-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row p-3">Es paciente y tolerante con sus clientes, aun en situaciones complejas.</div>
+          <div class="row-1 d-flex">
+            <input name="4-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-1" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="4-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Indaga y se informa sobre necesidades actuales y potenciales de sus clientes.</div>
-          <div class="col-2"><input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="4-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row p-3">Indaga y se informa sobre necesidades actuales y potenciales de sus clientes.</div>
+          <div class="row-1 d-flex">
+            <input name="4-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-2" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="4-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Planifica sus acciones y las de su equipo considerando las necesidades de los
+          <div class="row p-3">Planifica sus acciones y las de su equipo considerando las necesidades de los
             clientes.
           </div>
-          <div class="col-2"><input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="4-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row-1 d-flex">
+            <input name="4-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-3" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="4-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Genera ambientes y procesos de trabajo que cuidan y atienden al cliente.</div>
-          <div class="col-2"><input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="4-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row p-3">Genera ambientes y procesos de trabajo que cuidan y atienden al cliente.</div>
+          <div class="row-1 d-flex">
+            <input name="4-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="4-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Se esfuerza por ofrecer un excelente servicio.</div>
-          <div class="col-2"><input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="4-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row p-3">Se esfuerza por ofrecer un excelente servicio.</div>
+          <div class="row-1 d-flex">
+            <input name="4-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="4-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="4-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
@@ -380,61 +564,125 @@
       <div id="Pregunta_5" hidden>
         <div class="row">
           <div class="h5 centro">INICIATIVA E INNOVACIÓN</div>
-          <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div>
         </div>
         <div class="row">
-          <div class="col pregunta">Es participativo, aporta ideas y estimula a su gente para que actúe de la misma
+          <div class="row p-3">Es participativo, aporta ideas y estimula a su gente para que actúe de la misma
             forma.
           </div>
-          <div class="col-2"><input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="5-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row-1 d-flex">
+            <input name="5-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-1" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="5-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Da ejemplo con su actitud y toma iniciativas para la mejora y la eficiencia.</div>
-          <div class="col-2"><input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input checked name="5-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+          <div class="row p-3">Da ejemplo con su actitud y toma iniciativas para la mejora y la eficiencia.</div>
+          <div class="row-1 d-flex">
+            <input name="5-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input checked name="5-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Idea y lleva a cabo soluciones novedosas para resolver problemas.</div>
-          <div class="col-2"><input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="5-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row p-3">Idea y lleva a cabo soluciones novedosas para resolver problemas.</div>
+          <div class="row-1 d-flex">
+            <input name="5-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="5-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Le gusta estar informado y aprender para aplicar estos conocimientos si tiene
+          <div class="row p-3">Le gusta estar informado y aprender para aplicar estos conocimientos si tiene
             oportunidad.</div>
-          <div class="col-2"><input checked name="5-4" class="form-check-input" type="radio" id="Encuesta" value="1">
+          <div class="row-1 d-flex">
+            <input checked name="5-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Muestra interés para solucionar los errores cometidos por el o por sus compañeros.
+          <div class="row p-3">Muestra interés para solucionar los errores cometidos por el o por sus compañeros.
           </div>
-          <div class="col-2"><input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="5-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row-1 d-flex">
+            <input name="5-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="5-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="5-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
           <div class="centro" id="Promedio5"><!-- Aqui va el promedio --></div>
@@ -444,61 +692,125 @@
       <div id="Pregunta_6" hidden>
         <div class="row">
           <div class="h5 centro">TRABAJO EN EQUIPO Y RELACIONES INTERPERSONALES</div>
-          <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div>
         </div>
         <div class="row">
-          <div class="col pregunta">Actúa para generar un ambiente de trabajo amistoso, de buen clima y cooperación.
+          <div class="row p-3">Actúa para generar un ambiente de trabajo amistoso, de buen clima y cooperación.
           </div>
-          <div class="col-2"><input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="6-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row-1 d-flex">
+            <input name="6-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-1" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="6-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Valora y promueve el trabajo en equipo.</div>
-          <div class="col-2"><input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="6-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row p-3">Valora y promueve el trabajo en equipo.</div>
+          <div class="row-1 d-flex">
+            <input name="6-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="6-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Implementa modalidades alternativas de trabajo en equipo, a fin de añadir valor a
+          <div class="row p-3">Implementa modalidades alternativas de trabajo en equipo, a fin de añadir valor a
             los
             resultados.</div>
-          <div class="col-2"><input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="6-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row-1 d-flex">
+            <input name="6-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="6-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Logra la cooperación de las personas involucradas directa o indirectamente con su
+          <div class="row p-3">Logra la cooperación de las personas involucradas directa o indirectamente con su
             área.
           </div>
-          <div class="col-2"><input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="6-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row-1 d-flex">
+            <input name="6-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="6-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Motiva al equipo a integrar sus ideas y llegar a consensos.</div>
-          <div class="col-2"><input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="6-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row p-3">Motiva al equipo a integrar sus ideas y llegar a consensos.</div>
+          <div class="row-1 d-flex">
+            <input name="6-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="6-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="6-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
@@ -509,62 +821,126 @@
       <div id="Pregunta_7" hidden>
         <div class="row">
           <div class="h5 centro">LIDERAZGO</div>
-          <div class="col-2"></div>
-          <div class="col-2">Insuficiente</div>
-          <div class="col-2">En observación</div>
-          <div class="col-2">Bueno</div>
-          <div class="col-2">Muy bueno</div>
-          <div class="col-2">Excelente</div>
         </div>
         <div class="row">
-          <div class="col pregunta">Hace uso de su autoridad de forma justa y equitativa.
+          <div class="row p-3">Hace uso de su autoridad de forma justa y equitativa.
           </div>
-          <div class="col-2"><input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input checked name="7-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+          <div class="row-1 d-flex">
+            <input name="7-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-1" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="7-1" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
           </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Reconoce a los empleados con potencial, creando oportunidades para ellos.</div>
-          <div class="col-2"><input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input checked name="7-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+          <div class="row p-3">Reconoce a los empleados con potencial, creando oportunidades para ellos.</div>
+          <div class="row-1 d-flex">
+            <input name="7-2" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="7-2" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-2" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Realiza un apropiado seguimiento de las tareas, brindando feedback a sus
+          <div class="row p-3">Realiza un apropiado seguimiento de las tareas, brindando feedback a sus
             colaboradores.
           </div>
-          <div class="col-2"><input checked name="7-3" class="form-check-input" type="radio" id="Encuesta" value="1">
+          <div class="row-1 d-flex">
+            <input checked name="7-3" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="4"></div>
-          <div class="col-2"><input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-3" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Motiva y establece un clima de confianza, generando entusiasmo y compromiso en su
+          <div class="row p-3">Motiva y establece un clima de confianza, generando entusiasmo y compromiso en su
             equipo.
           </div>
-          <div class="col-2"><input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input checked name="7-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+          <div class="row-1 d-flex">
+            <input name="7-4" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="7-4" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-4" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
-          <div class="col pregunta">Guía de manera efectiva al equipo de trabajo para cumplir con los objetivos.</div>
-          <div class="col-2"><input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="1"></div>
-          <div class="col-2"><input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="2"></div>
-          <div class="col-2"><input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="3"></div>
-          <div class="col-2"><input checked name="7-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+          <div class="row p-3">Guía de manera efectiva al equipo de trabajo para cumplir con los objetivos.</div>
+          <div class="row-1 d-flex">
+            <input name="7-5" class="form-check-input" type="radio" id="Encuesta" required value="1">
+            <div class="ps-3">Insuficiente</div>
           </div>
-          <div class="col-2"><input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="5"></div>
+          <div class="row-1 d-flex">
+            <input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="2">
+            <div class="ps-3">En observacion</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="3">
+            <div class="ps-3">Bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input checked name="7-5" class="form-check-input" type="radio" id="Encuesta" value="4">
+            <div class="ps-3">Muy bueno</div>
+          </div>
+          <div class="row-1 d-flex">
+            <input name="7-5" class="form-check-input" type="radio" id="Encuesta" value="5">
+            <div class="ps-3">Excelente</div>
+          </div>
         </div>
         <div class="row">
           <div class="centro" id="Promedio7"><!-- Aqui va el promedio --></div>
@@ -573,10 +949,10 @@
       <div id="Pregunta_8" hidden>
         <div class="centro h4"> EVALUACIÓN DE OBJETIVOS (50%)</div>
         <div class="row">
-          <div class="col-5">DESCRIPCIÓN DE OBJETIVOS</div>
-          <div class="col-2 text-center">META</div>
-          <div class="col text-start">RESULTADO</div>
-          <div class="col">CALIFICACIÓN</div>
+          <div class="col-5 text-center">DESCRIPCIÓN DE OBJETIVOS</div>
+          <div class="col-1 text-center mx-4">META</div>
+          <div class="col-2 text-center ms-3 p-0">RESULTADO</div>
+          <div class="col-2 text-center ps-0">CALIFICACIÓN</div>
         </div>
         <div id="FilaObjetivos" class="row">
         </div>
@@ -584,6 +960,25 @@
           <button type="button" id="NuevaFila" class="btn btn-secondary"><i
               class="fa-solid fa-chevron-down iconArrow"></i></button><br>
         </div>
+
+        <div class="p-3">
+          <h5 class="text-center">COMPROMISOS DE MEJORAMIENTO</h5>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" style="height: 250px"
+              id="floatingTextarea" required></textarea>
+            <label for="floatingTextarea">Por favor ingrese la informacion</label>
+          </div>
+        </div>
+
+        <div class="p-3">
+          <h5 class="text-center">DESARROLLO PERSONAL</h5>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" style="height: 250px"
+              id="floatingTextarea" required></textarea>
+            <label for="floatingTextarea">Por favor ingrese la informacion</label>
+          </div>
+        </div>
+
         <div class="text-end">
           <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
         </div>
