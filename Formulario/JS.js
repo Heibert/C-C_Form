@@ -271,6 +271,12 @@ function CrearFila() {
   button.appendChild(icon)
   nFila.append(button)
   Fila.append(nFila)
+  //Eliminar primer boton de eleminar fila
+  const deleteButton = document.getElementById('eliminarFila_1')
+  if (deleteButton) {
+    deleteButton.classList.add('invisible')
+  }
+  
   //Agregar eventos a meta y resultado
   document.getElementById(`meta_${campos}`).addEventListener("keyup", (e) => {
     let nPregunta = e.composedPath()[0].id.split("_", 2)[1]

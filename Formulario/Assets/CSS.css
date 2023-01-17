@@ -52,3 +52,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .iconArrow {
     width: 250px !important;
 }
+
+
+.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
