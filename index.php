@@ -12,6 +12,7 @@ if (!isset($_SESSION['usuario'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/619ba43be5.js" crossorigin="anonymous"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
@@ -1058,13 +1059,10 @@ alert alert-warning		</script>";
 }
 $contador = 0;
 foreach ($_POST as $i => $value) {
-	echo "<br>$value";
 	if ($value != "2") {
 		$contador++;
 	}
 }
-echo $contador;
-echo count($_POST);
 ?>
 
 </html>

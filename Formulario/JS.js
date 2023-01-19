@@ -174,7 +174,7 @@ function subir(rCriterios) {
   });
   let pCriterios = sCriterios / rCriterios.length;
   //Crear tabla para mostrar los resultados
-  let tabla = Crear("table");
+  /* let tabla = Crear("table");
   let tbody = Crear("tbody");
   let texto = [
     "Calidad del trabajo: ",
@@ -183,11 +183,11 @@ function subir(rCriterios) {
     "Orientación del cliente: ",
     "Iniciativa e innovación: ",
     "Trabajo en equipo y relaciones interpersonales: ",
-    "Liderazgo: ",
-    "El promedio de los criterios de evaluación es: ",
-    "El promedio total de la evaluacion es: ",
+    "Liderazgo: "
   ];
-  let pFinal = (pCriterios + pObjetivos) / 2;
+  /*   const pFinal = (pCriterios + pObjetivos) / 2;
+  
+/*  
   console.log("El promedio final es: ", pFinal.toFixed(1));
   for (let i = 0; i < rCriterios.length + 1; i++) {
     let tr = Crear(`tr`);
@@ -202,24 +202,37 @@ function subir(rCriterios) {
       Colocar(td_2, tdT_2);
     }
     if (i === rCriterios.length) {
-      let tdT_1 = document.createTextNode(
-        "Promedio de Evaluación de objetivos: "
+      let tdT_1 = document.createTextNode("El promedio de la evaluación es: ")
+      let tdT_2 = document.createTextNode(pFinal.toFixed(1))
+      let tdT_3 = document.createTextNode(
+        "Promedio de criterios: "
       );
-      let tdT_2 = document.createTextNode(pObjetivos.toFixed(1));
+      let tdT_4 = document.createTextNode(pCriterios.toFixed(1));
+      let tdT_5 = document.createTextNode("Promedio de los objetivos");
+      let tdT_6 = document.createTextNode(pObjetivos.toFixed(1));
+      let td_3 = Crear('td')
+      let td_4 = Crear('td')
+      let td_5 = Crear('td')
+      let td_6 = Crear('td')
+      let tr_2 = Crear('tr')
+      let tr_3 = Crear('tr')
       Colocar(td_1, tdT_1);
       Colocar(td_2, tdT_2);
-      let tdFT_2 = document.createTextNode(pObjetivos.toFixed(1));
-      Colocar(td_1, tdT_1);
-      Colocar(td_2, tdT_2);
-      let tdFT = document.createTextNode(
-          "El promedio de la evaluacion es: "
-        );
+      Colocar(td_3, tdT_3);
+      Colocar(td_4, tdT_4);
+      Colocar(td_5, tdT_5);
+      Colocar(td_6, tdT_6);
+      Colocar(tr_2, td_3)
+      Colocar(tr_2, td_4)
+      Colocar(tr_3, td_5)
+      Colocar(tr_3, td_6)
+      Colocar(tbody, tr_2);
+      Colocar(tbody, tr_3);
     }
     Colocar(tr, td_1);
     Colocar(tr, td_2);
     Colocar(tbody, tr);
   }
-  
   Colocar(tabla, tbody);
   let td_FT = Crear('tr')
   swal({
@@ -233,7 +246,64 @@ function subir(rCriterios) {
       LlamarId("Guardar").submit();
     }
   });
+  */
+
+  /* Nuevo Alert */
+  Swal.fire({
+    title: 'Are you sure?',
+    html:
+      `<table>
+         <tbody>
+         <tr>
+           <td>Calidad del trabajo: </td>
+           <td>2</td>
+           </tr><tr>
+           <td>Comunicación: </td>
+           <td>2</td>
+           </tr><tr>
+           <td>Compromiso: </td>
+           <td>2</td>
+           </tr><tr>
+           <td>Orientación del cliente: </td>
+           <td>2</td>
+           </tr><tr>
+           <td>Iniciativa e innovación: </td>
+           <td>2</td>
+           </tr><tr><td>Trabajo en equipo y relaciones interpersonales: </td>
+           <td>2</td>
+           </tr><tr>
+           <td>Liderazgo: </td>
+           <td>2</td>
+           </tr><tr>
+           <td>Promedio de criterios: </td>
+           <td>${pCriterios}</td>
+           </tr><tr>
+           <td>Promedio de los objetivos</td>
+           <td>${pObjetivos}</td>
+           </tr><tr>
+           <td>El promedio de la evaluación es: </td>
+           <td>${pFinal}</td>
+         </tr>
+         </tbody>
+       </table>`,
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
 }
+
+
+
 /* Calificacion de la evaluacion de objetivos */
 var tObjetivos = [];
 var pObjetivos = 0;
@@ -294,6 +364,7 @@ function CrearFila() {
   inputT.setAttribute("name", `Objetivo_${campos}`);
   inputT.setAttribute("required", "");
   inputT.setAttribute("class", "form-control");
+  inputT.setAttribute("value", "Ventas");
   divT.appendChild(inputT);
   nFila.append(divT);
   Fila.append(nFila);
@@ -306,6 +377,7 @@ function CrearFila() {
   inputN.setAttribute("id", `meta_${campos}`);
   inputN.setAttribute("name", `meta_${campos}`);
   inputN.setAttribute("class", "form-control");
+  inputN.setAttribute("value", "100");
   divN.appendChild(inputN);
   nFila.append(divN);
   Fila.append(nFila);
@@ -317,6 +389,7 @@ function CrearFila() {
   inputNR.setAttribute("id", `resultado_${campos}`);
   inputNR.setAttribute("name", `resultado_${campos}`);
   inputNR.setAttribute("required", "");
+  inputNR.setAttribute("value", "200");
   inputNR.setAttribute("class", "form-control");
   divNR.appendChild(inputNR);
   nFila.append(divNR);
@@ -423,3 +496,6 @@ formCedula.addEventListener("submit", MostrarS());
 // Ejecutar scroll a la primera pregunta
 const scrolls = document.querySelectorAll(".scroll");
 console.log(document.querySelectorAll('input[type=radio]:checked').length)
+
+
+
