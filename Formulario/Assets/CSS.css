@@ -1,5 +1,12 @@
 body {
-    font-family: "Open Sans";
+    background-color: white;
+}
+
+img {
+    height: auto;
+}
+
+body {
     font-size: 18px;
 }
 
