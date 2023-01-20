@@ -13,18 +13,19 @@ if (!isset($_SESSION['usuario'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/619ba43be5.js" crossorigin="anonymous"></script>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 	<link rel="stylesheet" href="./Formulario/Assets/CSS.css">
 	<link rel="shortcut icon" href="./Formulario/Assets/logo favicon.png">
-	<title>Formulario</title>
+	<title>Evaluacion</title>
 </head>
 
 <body class="bg-primary container p-5">
 	<div class="rounded container p-5 bg-white">
 		<!-- Encabezado -->
-		<div id="nombreEvaluado"></div>
+		<div class="disabled" id="nombreEvaluado"></div>
 		<div class="text-center">
 			<img class="text-center p-3" src="./Formulario/Assets/logotipo_h®.png" alt="Logo corporativo" width="20%">
 		</div>
@@ -39,9 +40,9 @@ if (!isset($_SESSION['usuario'])) {
 		<div class="h5 centro">CALIDAD DEL TRABAJO</div>
 
 		<form action="./" method="POST" id=formCedula>
-			<div class="row pb-3 ps-3">
-				<div class="col-3">
-					<label for="cedula">Cedula de ciudadania:</label>
+			<div class="row p-3 ps-3">
+				<div class="col-5">
+					<label for="cedula">Cedula de ciudadania de la persona a evaluar:</label>
 					<input required type="number" name="cedula" class="form-control" id="cedula">
 				</div>
 				<div class="col-1 text-center align-self-end">
@@ -53,13 +54,14 @@ if (!isset($_SESSION['usuario'])) {
 		<!-- Contenido -->
 		<form class="container" method="post" name="Formulario" id="Guardar" hidden>
 			<!-- Encuesta -->
+			<input type="number" name="cedulaV" id="cedulaE" hidden>
 			<div id="Pregunta_1" hidden>
 				<div class="row pt-3 ps-1">
 					<div class="col-4 text-center">
 						<div class="form-floating">
 							<select name="motivoEval" class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
 								<option value="" selected>Seleccione una opción por favor</option>
-								<option selected value="Semestral">Semestral</option>
+								<option value="Semestral">Semestral</option>
 								<option value="Ascenso">Ascenso</option>
 								<option value="Salario">Aumento de salario</option>
 							</select>
@@ -67,18 +69,17 @@ if (!isset($_SESSION['usuario'])) {
 						</div>
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="row p-3 scroll">Supervisa y corrige el trabajo del equipo, anticipándose ante errores o fallas.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="1-1" class="form-check-input" type="radio" id="Encuesta" required value="1">
-						<div class="ps-3">Insuficiente</div>
+						<label for='Encuesta' class="ps-3">Insuficiente</label>
 					</div>
 					<div class="row-1">
 						<div class="d-flex">
 							<input name="1-1" class="form-check-input" type="radio" id="Encuesta" checked value="2">
-							<p class="ps-3 m-0">En observación</p>
+							<label for='Encuesta' class="ps-3">En Observacion</label>
 						</div>
 					</div>
 					<div class="row-1 d-flex">
@@ -965,6 +966,9 @@ if (!isset($_SESSION['usuario'])) {
 				</div>
 				<div class="row" hidden>
 					<input readonly name="promedio7" class="centro" id="Promedio7"><!-- Aqui va el promedio --></input>
+					<input type="number" name="promedioC" id="promedioC" hidden>
+					<input type="number" name="pObjetivos" id="pObjetivos" hidden>
+					<input type="number" name="pFinal" id="pFinal" hidden>
 				</div>
 			</div>
 			<div id="Pregunta_8" hidden>
@@ -984,32 +988,32 @@ if (!isset($_SESSION['usuario'])) {
 				<div class="p-3">
 					<h5 class="text-center">COMPROMISOS DE MEJORAMIENTO</h5>
 					<div class="form-floating">
-						<textarea name="compromisos" class="form-control" placeholder="Leave a comment here" style="height: 150px" id="floatingTextarea"></textarea>
-						<label for="floatingTextarea">Por favor ingrese la informacion</label>
+						<textarea value="Compromiso" name="compromisos" class="form-control" placeholder="Leave a comment here" style="height: 150px" maxlength="500" id="floatingTextarea">Compromiso</textarea>
+						<label for="floatingTextarea">Por favor ingrese los compromisos de mejoramiento (Max 500 caracteres)</label>
 					</div>
 				</div>
 
 				<div class="p-3">
 					<h5 class="text-center">DESARROLLO DE PERSONAL</h5>
 					<div class="form-floating">
-						<textarea name="desarrolloP" class="form-control" placeholder="Leave a comment here" style="height: 150px" id="floatingTextarea"></textarea>
-						<label for="floatingTextarea">Por favor ingrese la informacion</label>
+						<textarea value="Desarrollo" name="desarrolloP" class="form-control" placeholder="Leave a comment here" style="height: 150px" maxlength="15" id="floatingTextarea">Desarrollo</textarea>
+						<label for="floatingTextarea">Por favor ingrese la informacion de desarrollo de personal (Max 500 caracteres)</label>
 					</div>
 				</div>
 
 				<div class="p-3">
 					<h5 class="text-center">OBSERVACIONES DEL EVALUADOR</h5>
 					<div class="form-floating">
-						<textarea name="obsEvaluador" class="form-control" placeholder="Leave a comment here" style="height: 150px" id="floatingTextarea"></textarea>
-						<label for="floatingTextarea">Por favor ingrese la informacion</label>
+						<textarea maxlength="500" value="observaciones evaluador" name="obsEvaluador" class="form-control" placeholder="Leave a comment here" style="height: 150px" maxlength="500" id="floatingTextarea">observaciones evaluador</textarea>
+						<label for="floatingTextarea">Por favor ingrese sus observaciones (Max 500 caracteres)</label>
 					</div>
 				</div>
 
 				<div class="p-3">
 					<h5 class="text-center">OBSERVACIONES DEL EVALUADO</h5>
 					<div class="form-floating">
-						<textarea name="obsEvaluado" class="form-control" placeholder="Leave a comment here" style="height: 150px" id="floatingTextarea"></textarea>
-						<label for="floatingTextarea">Por favor ingrese la informacion</label>
+						<textarea value="Observaciones evaluado" name="obsEvaluado" class="form-control" placeholder="Leave a comment here" style="height: 150px" maxlength="500" id="floatingTextarea">Observaciones evaluado</textarea>
+						<label for="floatingTextarea">Por favor ingrese las observaciones del evaluado (Max 500 caracteres)</label>
 					</div>
 				</div>
 
@@ -1034,35 +1038,132 @@ if (!isset($_SESSION['usuario'])) {
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="./Formulario/JS.js"></script>
 <?php
-$mysqli = new mysqli("172.16.0.6", "root", "*4b0g4d0s4s*", "userscyc");
+//Conexion con MYSQL
+$mysqli  = new mysqli("172.16.0.6", "root", "*4b0g4d0s4s*", "userscyc");
 if ($mysqli->connect_errno) {
 	echo $mysqli->connect_error;
 }
+if (isset($_POST["cedulaV"])) {
+	$cedulaV = $_POST["cedulaV"];
+}
+//Evaluar si la hay la cedula existe
 if (isset($_POST["cedula"]) && $_POST["cedula"] != "") {
+
 	$cedula = $_POST["cedula"];
 	$result = $mysqli->query("SELECT id_user,pnom_user,snom_user,pape_user,sape_user FROM users WHERE id_user = $cedula");
-	if ($result->num_rows != NULL) {
+	if ($result->num_rows != NULL && $result->num_rows != 0) {
 		$consulta = $result->fetch_row();
 		echo
 		"<script>
+			LlamarId('cedulaE').value = $cedula 
 			LlamarId('Guardar').hidden = false 
+			console.log( LlamarId('Guardar').hidden)
 			const nombreEvaluado = document.getElementById('nombreEvaluado')
-			nombreEvaluado.innerText = 'Persona a evaluar: $consulta[1] $consulta[2] $consulta[3] $consulta[4]'
-		</script>";
+			const nombreEvaluadoMostrar = '$consulta[1] $consulta[2] $consulta[3] $consulta[4]'
+			const nombreEvaluadoLower = nombreEvaluadoMostrar.toLowerCase()
+/* 			const nombreEvaluadoCapitalize = nombreEvaluadoLower.replace(/\b\w/g, l => l.toUpperCase())
+			nombreEvaluado.textContent = 'Persona a evaluar: '+nombreEvaluadoCapitalize
+ */		</script>";
 	} else {
-		echo
-		"<script>
-			nombreEvaluado.innerText = 'No se ha encontrado al usuario correspondiente'
-			nombreEvaluado.setAttribute('class','alert alert-warning text-center')	
-alert alert-warning		</script>";
+		echo "<script>
+			cedulaNoEncontrada();
+		</script>";
 	}
 }
-$contador = 0;
-foreach ($_POST as $i => $value) {
-	if ($value != "2") {
-		$contador++;
+//Subir los datos
+if (isset($cedulaV)) {
+	//Convertir los datos a variables
+	$evaluador = $_SESSION["usuario"];
+	$motivoEval = $_POST["motivoEval"];
+	$promedio1 = $_POST["promedio1"];
+	$promedio2 = $_POST["promedio2"];
+	$promedio3 = $_POST["promedio3"];
+	$promedio4 = $_POST["promedio4"];
+	$promedio5 = $_POST["promedio5"];
+	$promedio6 = $_POST["promedio6"];
+	$promedio7 = $_POST["promedio7"];
+	$promedioC = $_POST["promedioC"];
+	$pObjetivos = $_POST["pObjetivos"];
+	$compromisos = $_POST["compromisos"];
+	$desarrolloP = $_POST["desarrolloP"];
+	$obsEvaluador = $_POST["obsEvaluador"];
+	$obsEvaluado = $_POST["obsEvaluado"];
+	$pFinal = $_POST["pFinal"];
+
+	if (isset($_POST["Objetivo_1"])) {
+		$Objetivos[1] = $_POST["Objetivo_1"];
+		$metas[1] = $_POST["meta_1"];
+		$resultados[1] = $_POST["resultado_1"];
+		$Calificaciones[1] = $_POST["Calificacion_1"];
 	}
+	if (isset($_POST["Objetivo_2"])) {
+		$Objetivos[2] = $_POST["Objetivo_2"];
+		$metas[2] = $_POST["meta_2"];
+		$resultados[2] = $_POST["resultado_2"];
+		$Calificaciones[2] = $_POST["Calificacion_2"];
+	}
+	if (isset($_POST["Objetivo_3"])) {
+		$Objetivos[3] = $_POST["Objetivo_3"];
+		$metas[3] = $_POST["meta_3"];
+		$resultados[3] = $_POST["resultado_3"];
+		$Calificaciones[3] = $_POST["Calificacion_3"];
+	}
+	if (isset($_POST["Objetivo_4"])) {
+		$Objetivos[4] = $_POST["Objetivo_4"];
+		$metas[4] = $_POST["meta_4"];
+		$resultados[4] = $_POST["resultado_4"];
+		$Calificaciones[4] = $_POST["Calificacion_4"];
+	}
+	if (isset($_POST["Objetivo_5"])) {
+		$Objetivos[5] = $_POST["Objetivo_5"];
+		$metas[5] = $_POST["meta_5"];
+		$resultados[5] = $_POST["resultado_5"];
+		$Calificaciones[5] = $_POST["Calificacion_5"];
+	}
+	if (isset($_POST["Objetivo_6"])) {
+		$Objetivos[6] = $_POST["Objetivo_6"];
+		$metas[6] = $_POST["meta_6"];
+		$resultados[6] = $_POST["resultado_6"];
+		$Calificaciones[6] = $_POST["Calificacion_6"];
+	}
+	if (isset($_POST["Objetivo_7"])) {
+		$Objetivos[7] = $_POST["Objetivo_7"];
+		$metas[7] = $_POST["meta_7"];
+		$resultados[7] = $_POST["resultado_7"];
+		$Calificaciones[7] = $_POST["Calificacion_7"];
+	}
+	if (isset($_POST["Objetivo_8"])) {
+		$Objetivos[8] = $_POST["Objetivo_8"];
+		$metas[8] = $_POST["meta_8"];
+		$resultados[8] = $_POST["resultado_8"];
+		$Calificaciones[8] = $_POST["Calificacion_8"];
+	}
+	if (isset($_POST["Objetivo_9"])) {
+		$Objetivos[9] = $_POST["Objetivo_9"];
+		$metas[9] = $_POST["meta_9"];
+		$resultados[9] = $_POST["resultado_9"];
+		$Calificaciones[9] = $_POST["Calificacion_9"];
+	}
+	if (isset($_POST["Objetivo_10"])) {
+		$Objetivos[10] = $_POST["Objetivo_10"];
+		$metas[10] = $_POST["meta_10"];
+		$resultados[10] = $_POST["resultado_10"];
+		$Calificaciones[10] = $_POST["Calificacion_10"];
+	}
+	$sql = $mysqli->prepare("INSERT INTO eDesempenoCPA(id_evaluador,id_evaluado,motivoE,promedio_1,promedio_2,promedio_3,promedio_4,promedio_5,promedio_6,promedio_7,promedioCriterios,objetivo_1,meta_1,rObjetivo_1,ponderacionObjetivo_1,objetivo_2,meta_2,rObjetivo_2,ponderacionObjetivo_2,objetivo_3,meta_3,rObjetivo_3,ponderacionObjetivo_3,objetivo_4,meta_4,rObjetivo_4,ponderacionObjetivo_4,objetivo_5,meta_5,rObjetivo_5,ponderacionObjetivo_5,objetivo_6,meta_6,rObjetivo_6,ponderacionObjetivo_6,objetivo_7,meta_7,rObjetivo_7,ponderacionObjetivo_7,objetivo_8,meta_8,rObjetivo_8,ponderacionObjetivo_8,objetivo_9,meta_9,rObjetivo_9,ponderacionObjetivo_9,objetivo_10,meta_10,rObjetivo_10,ponderacionObjetivo_10,compromisos,desarrolloP,obsEvaluador,obsEvaluado,promedioObjetivos,pFinal)
+	VALUE ($evaluador,$cedulaV,$promedio1,$promedio2,$promedio3,$promedio4,$promedio5,$promedio6,$promedio7,$promedioC)");
+	echo "Esto", $evaluador, "<br>", $cedulaV, "<br>", $motivoEval, "<br>", $promedio1, "<br>", $promedio2, "<br>", $promedio3, "<br>", $promedio4, "<br>", $promedio5, "<br>", $promedio6, "<br>", $promedio7, "<br>", $promedioC, "<br>", $Objetivos[1], "<br>", $metas[1], "<br>", $resultados[1], "<br>", $Calificaciones[1], "<br>", $Objetivos[2], "<br>", $metas[2], "<br>", $resultados[2], "<br>", $Calificaciones[2], "<br>", $Objetivos[3], "<br>", $metas[3], "<br>", $resultados[3], "<br>", $Calificaciones[3], "<br>", $Objetivos[4], "<br>", $metas[4], "<br>", $resultados[4], "<br>", $Calificaciones[4], "<br>", $Objetivos[5], "<br>", $metas[5], "<br>", $resultados[5], "<br>", $Calificaciones[5], "<br>", $Objetivos[6], "<br>", $metas[6], "<br>", $resultados[6], "<br>", $Calificaciones[6], "<br>", $Objetivos[7], "<br>", $metas[7], "<br>", $resultados[7], "<br>", $Calificaciones[7], "<br>", $Objetivos[8], "<br>", $metas[8], "<br>", $resultados[8], "<br>", $Calificaciones[8], "<br>", $Objetivos[9], "<br>", $metas[9], "<br>", $resultados[9], "<br>", $Calificaciones[9], "<br>", $Objetivos[10], "<br>", $metas[10], "<br>", $resultados[10], "<br>", $Calificaciones[10], "<br>", $compromisos, "<br>", $desarrolloP, "<br>", $obsEvaluador, "<br>", $obsEvaluado, "<br>", $pObjetivos, "<br>", $pFinal;
+	echo $mysqli->error;
+	var_dump($sql);
+	$sql->execute();
+	echo $obsEvaluador, $obsEvaluado;
+	echo mysqli_error($conn);
+	// Commit the transaction
+	echo "<pre>";
+	echo "</pre>";
 }
+// Close the connection
+mysqli_close($conn);
 ?>
 
 </html>
