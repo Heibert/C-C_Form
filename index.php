@@ -1,8 +1,8 @@
 <?php
-session_start();
+/* session_start();
 if (!isset($_SESSION['usuario'])) {
 	header("Location: https://intranet.cyc-bpo.com/index.php");
-}
+} */
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -1061,9 +1061,12 @@ if (isset($_POST["cedula"]) && $_POST["cedula"] != "") {
 			const nombreEvaluado = document.getElementById('nombreEvaluado')
 			const nombreEvaluadoMostrar = '$consulta[1] $consulta[2] $consulta[3] $consulta[4]'
 			const nombreEvaluadoLower = nombreEvaluadoMostrar.toLowerCase()
-/* 			const nombreEvaluadoCapitalize = nombreEvaluadoLower.replace(/\b\w/g, l => l.toUpperCase())
-			nombreEvaluado.textContent = 'Persona a evaluar: '+nombreEvaluadoCapitalize
- */		</script>";
+ 			let words = nombreEvaluadoLower.split(' ');
+      		let capitalizedText = words
+      		.map((word) => word[0].toUpperCase() + word.slice(1))
+      		.join(' ');
+			nombreEvaluado.textContent = 'Persona a evaluar: '+capitalizedText
+		</script>";
 	} else {
 		echo "<script>
 			cedulaNoEncontrada();
