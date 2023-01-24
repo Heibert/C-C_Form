@@ -34,11 +34,20 @@ let objCreados = 0;
 function MostrarS(e) {
     // Ocultar form cedula
     const formCedula = document.getElementById("formCedula");
-    if (pagina === 0 || pagina === 1) {
+    if (pagina === 0) {
         formCedula.hidden = false;
     } else {
         formCedula.hidden = true;
     }
+
+    // Ocultar div calidad
+    const calidadTrabajo = document.getElementById("calidadTrabajo");
+    if (pagina === 0) {
+        calidadTrabajo.hidden = false;
+    } else {
+        calidadTrabajo.hidden = true;
+    }
+
     if (
         (pagina * 5 <= document.querySelectorAll("input:checked").length &&
             document.querySelector("select").value != "") ||
@@ -54,6 +63,11 @@ function MostrarS(e) {
                         `input[type=radio][value="1"][name="${pagina}-${i}"]`
                     )
                     .setAttribute("required", "");
+                document
+                    .querySelector(
+                        `input[type=radio][value="1"][name="${pagina}-${i}"]`
+                    )
+                    .setAttribute("checked", "");
             }
         }
         if (pagina > 1) {
@@ -82,11 +96,19 @@ function MostrarS(e) {
 function MostrarA(e) {
     e.preventDefault();
     pagina--;
-    if (pagina === 0 || pagina === 1) {
+    if (pagina === 1) {
         formCedula.hidden = false;
     } else {
         formCedula.hidden = true;
     }
+
+    // Ocultar calidad div
+    if (pagina === 1) {
+        calidadTrabajo.hidden = false;
+    } else {
+        calidadTrabajo.hidden = true;
+    }
+
     document.getElementById(`Pregunta_${pagina}`).hidden = false;
     document.getElementById(`Pregunta_${pagina + 1}`).hidden = true;
     if (pagina >= 2) {
@@ -99,8 +121,9 @@ function MostrarA(e) {
         botonS.hidden = false;
     }
 }
+
 /* Comprobación de datos */
-var CantidadCheck = document.querySelectorAll(`#Encuesta`).length;
+var CantidadCheck = document.querySelectorAll("input[type='radio']").length;
 var ChecksT = false;
 /* Promedio */
 function Promediar(e) {
@@ -128,8 +151,6 @@ function Promediar(e) {
                     `input[name="${Check}"]:checked`
                 ).value;
                 Respuestas.push(ValorC);
-            } else {
-                console.log("falta contestar");
             }
         }
         if (checkB == 5) {
@@ -155,6 +176,12 @@ function Promediar(e) {
         let valido = true;
         for (let i = 0; i < textAreas.length; i++) {
             if (textAreas[i].value === "") {
+                valido = false;
+            }
+        }
+        let textObjetivos = document.querySelectorAll("input[type=text]");
+        for (let i = 0; i < textObjetivos.length; i++) {
+            if (textObjetivos[i].value === "") {
                 valido = false;
             }
         }
@@ -225,8 +252,8 @@ function subir(rCriterios) {
       <td>${pObjetivos.toFixed(1)}</td>
     </tr>
     <tr>
-      <td>Promedio final de la evaluación:</td>
-      <td>${pFinal.toFixed(1)}</td>
+      <td class='pt-3 bold'>Promedio final de la evaluación:</td>
+      <td class='d-flex pt-3 bold'>${pFinal.toFixed(1)}</td>
     </tr>
   </table>`,
         footer: `<div class='text-center'>¿Estas seguro que desea guardar esta evaluación? Esta accion no se podra deshacer</div>`,
@@ -237,12 +264,6 @@ function subir(rCriterios) {
         cancelButtonText: "Cancelar",
         showCancelButton: true,
         showConfirmButton: true,
-        showClass: {
-            popup: "animate__animated animate__fadeInDown",
-        },
-        hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
-        },
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
@@ -311,9 +332,21 @@ function Calificacion(nPregunta) {
 var campos = 1;
 var camposE = 0;
 
+/* Alert pequeña */
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+});
+
 function CrearFila() {
     //Contenedores de las filas
-    console.log(campos);
     if (campos > 9) {
         let crearFila = LlamarId("NuevaFila");
         crearFila.classList.add("invisible");
@@ -328,10 +361,11 @@ function CrearFila() {
     var inputT = document.createElement("input");
     inputT.setAttribute("type", "text");
     inputT.setAttribute("id", `Objetivo_${campos}`);
+    inputT.setAttribute("maxlength", "10");
     inputT.setAttribute("name", `Objetivo_${campos}`);
     inputT.setAttribute("required", "");
     inputT.setAttribute("class", "form-control");
-    inputT.setAttribute("value", "Ventas");
+    inputT.setAttribute("autocomplete", "off");
     divT.appendChild(inputT);
     nFila.append(divT);
     Fila.append(nFila);
@@ -341,10 +375,11 @@ function CrearFila() {
     var inputN = document.createElement("input");
     inputN.setAttribute("type", "number");
     inputN.setAttribute("required", "");
+    inputN.setAttribute("maxlength", "10");
     inputN.setAttribute("id", `meta_${campos}`);
     inputN.setAttribute("name", `meta_${campos}`);
     inputN.setAttribute("class", "form-control");
-    inputN.setAttribute("value", "100");
+    inputN.setAttribute("autocomplete", "off");
     divN.appendChild(inputN);
     nFila.append(divN);
     Fila.append(nFila);
@@ -356,8 +391,9 @@ function CrearFila() {
     inputNR.setAttribute("id", `resultado_${campos}`);
     inputNR.setAttribute("name", `resultado_${campos}`);
     inputNR.setAttribute("required", "");
-    inputNR.setAttribute("value", "200");
+    inputNR.setAttribute("maxlength", "10");
     inputNR.setAttribute("class", "form-control");
+    inputNR.setAttribute("autocomplete", "off");
     divNR.appendChild(inputNR);
     nFila.append(divNR);
     Fila.append(nFila);
@@ -370,6 +406,7 @@ function CrearFila() {
     inputC.setAttribute("name", `Calificacion_${campos}`);
     inputC.setAttribute("type", "text");
     inputC.setAttribute("readonly", "");
+    inputC.setAttribute("autocomplete", "off");
     Colocar(divC, inputC);
     nFila.append(divC);
     Fila.append(nFila);
@@ -408,18 +445,12 @@ function CrearFila() {
             Swal.fire({
                 icon: "warning",
                 title: "¿Esta seguro de eliminar la fila?",
-                text: "Se eliminaran todos los datos de está.",
+                text: "Se eliminaran todos los datos de esta fila.",
                 confirmButtonColor: "#5bcce8",
                 confirmButtonText: "Aceptar",
-
-                showClass: {
-                    popup: "animate__animated animate__fadeInDown",
-                },
-                hideClass: {
-                    popup: "animate__animated animate__fadeOutUp",
-                },
-            }).then((willDelete) => {
-                if (willDelete) {
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
                     for (let i = filaE; i <= campos; i++) {
                         if (document.getElementById(`fila_${i + 1}`) !== null) {
                             document.getElementById(
@@ -444,6 +475,11 @@ function CrearFila() {
                     }
                     document.getElementById(`fila_${filaE}`).remove();
                     campos--;
+
+                    Toast.fire({
+                        icon: "success",
+                        title: "Fila eliminada correctamente",
+                    });
                 }
             });
         });
@@ -469,18 +505,18 @@ const scrolls = document.querySelectorAll(".scroll");
 
 // Alert cedula no encontrada de persona a evaluar
 const cedulaNoEncontrada = () => {
-    Swal.fire({
+    Toast.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Cedula no encontrada",
-        confirmButtonColor: "#5bcce8",
-        confirmButtonText: "Aceptar",
-
-        showClass: {
-            popup: "animate__animated animate__fadeInDown",
-        },
-        hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
-        },
+        title: "Cedula no encontrada",
     });
 };
+
+// Alert cedula no encontrada de persona a evaluar
+const cedulaEncontrada = (capitalizedText) => {
+    Toast.fire({
+        icon: "success",
+        title: `Evaluando a: \n ${capitalizedText}`,
+    });
+};
+
+// Ocultar titulo calidad de trabajo
