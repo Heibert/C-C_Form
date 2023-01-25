@@ -24,9 +24,19 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body class="bg-primary container p-5">
-	<div class="rounded container p-5 bg-white">
+	<div class="loader loader-ball-grid-pulse"></div>
+	<div class="rounded container p-5 bg-white hidden-content" id='main-container'>
 		<!-- Encabezado -->
-		<div class="disabled" id="nombreEvaluado"></div>
+		<div class="d-flex justify-content-between">
+			<div class="disabled opacity" id="nombreEvaluado"></div>
+			<button id="cancelarEvaluacion" class="btn btn-danger btn-sm" hidden>Cancelar evaluacion</button>
+		</div>
+
+		<!-- New markup -->
+		<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+			<div class="progress-bar bg-info" style="width: 50%"></div>
+		</div>
+
 		<div class="text-center">
 			<img class="text-center p-3" src="./Formulario/Assets/logotipo_h®.png" alt="Logo corporativo" width="20%">
 		</div>
@@ -34,11 +44,13 @@ if (!isset($_SESSION['usuario'])) {
 			<h3>FORMATO EVALUACIÓN DE DESEMPEÑO LABORAL CON PERSONAL A CARGO</h3>
 		</div>
 
-		<div class="row">
-			<div class="centro h4" id="Criterios"> CRITERIOS DE EVALUACIÓN (50%)</div>
+		<div class="text-center">
+			<h3 class="bolder" id="Criterios"> CRITERIOS DE EVALUACIÓN (50%)</h3>
 		</div>
 
-		<div class="h5 centro" id='calidadTrabajo'>CALIDAD DEL TRABAJO</div>
+		<div class="text-center">
+			<div class="h5" id='calidadTrabajo'>CALIDAD DEL TRABAJO</div>
+		</div>
 
 		<form action="./" method="POST" id=formCedula>
 			<div class="row p-3 ps-3">
@@ -1057,6 +1069,9 @@ if (isset($_POST["cedula"]) && $_POST["cedula"] != "") {
 		$consulta = $result->fetch_row();
 		echo
 		"<script>
+		
+		// Obtener cedula y mostrarla quemada en el formulario
+
 			LlamarId('cedulaE').value = $cedula 
 			LlamarId('Guardar').hidden = false 
 			const nombreEvaluado = document.getElementById('nombreEvaluado')
@@ -1071,6 +1086,30 @@ if (isset($_POST["cedula"]) && $_POST["cedula"] != "") {
     		.join(' ');
 			nombreEvaluado.textContent = 'Persona a evaluar: '+capitalizedText
 			cedulaEncontrada(capitalizedText)
+			formCedula.hidden = true;
+			
+			const cancelarEvaluacion =
+            document.getElementById('cancelarEvaluacion');
+			
+			cancelarEvaluacion.hidden = false;
+
+        	const alertCancelarEvaluacion = () => {
+            Swal.fire({
+                icon: 'warning',
+                title: '¿Esta seguro que desea cancelar la evaluación?',
+                text: 'Se eliminaran todos los datos guardados',
+                confirmButtonColor: '#5bcce8',
+                confirmButtonText: 'Aceptar',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.replace('./');
+                }
+            });
+        };
+
+        cancelarEvaluacion.addEventListener('click', alertCancelarEvaluacion);
+
 		</script>";
 	} else {
 		echo "<script>

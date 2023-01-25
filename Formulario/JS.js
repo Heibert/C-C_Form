@@ -1,4 +1,17 @@
 "use strict";
+// Funcion animacion cargando
+
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementsByClassName("loader")[0].style.display = "none";
+        document
+            .getElementById("main-container")
+            .classList.remove("hidden-content");
+        document.getElementById("main-container").style.visibility = "visible";
+        document.getElementById("main-container").style.opacity = "1";
+    }, 100);
+};
+
 //Funcion para crear nodos
 function Crear(x) {
     return document.createElement(x);
@@ -32,28 +45,19 @@ window.addEventListener("load", function (e) {
 //Mostrar la seccion de pregunta
 let objCreados = 0;
 function MostrarS(e) {
-    // Ocultar form cedula
-    const formCedula = document.getElementById("formCedula");
-    if (pagina === 0) {
-        formCedula.hidden = false;
-    } else {
-        formCedula.hidden = true;
-    }
-
-    // Ocultar div calidad
-    const calidadTrabajo = document.getElementById("calidadTrabajo");
-    if (pagina === 0) {
-        calidadTrabajo.hidden = false;
-    } else {
-        calidadTrabajo.hidden = true;
-    }
-
     if (
         (pagina * 5 <= document.querySelectorAll("input:checked").length &&
             document.querySelector("select").value != "") ||
         pagina === 0
     ) {
         pagina++;
+
+        // Ocultar form cedula
+        const formCedula = document.getElementById("formCedula");
+        if (pagina > 1) {
+            formCedula.hidden = true;
+        }
+
         document.getElementById(`Pregunta_${pagina}`).hidden = false;
         //Colocar required en los radios
         if (pagina < 8) {
@@ -96,17 +100,11 @@ function MostrarS(e) {
 function MostrarA(e) {
     e.preventDefault();
     pagina--;
-    if (pagina === 1) {
+
+    if (pagina > 1) {
         formCedula.hidden = false;
     } else {
         formCedula.hidden = true;
-    }
-
-    // Ocultar calidad div
-    if (pagina === 1) {
-        calidadTrabajo.hidden = false;
-    } else {
-        calidadTrabajo.hidden = true;
     }
 
     document.getElementById(`Pregunta_${pagina}`).hidden = false;
@@ -166,7 +164,11 @@ function Promediar(e) {
             let Promedio = Sumatoria / Respuestas.length;
             /* Mostrar el promedio */
             document.getElementById(`Promedio${checkA}`).value = Promedio;
-            rCriterios.push(Promedio);
+
+            let PromedioFixeado = (Promedio * 2).toFixed(1);
+            rCriterios.push(
+                PromedioFixeado.toString().split(".").join("") + "%"
+            );
             Respuestas = [];
         }
     }
@@ -199,12 +201,13 @@ const guardarEvaluacion = () => {
 function subir(rCriterios) {
     let sCriterios = 0;
     rCriterios.forEach((element) => {
-        sCriterios += element;
+        sCriterios += parseInt(element);
     });
-    let pCriterios = sCriterios / rCriterios.length;
-    LlamarId("promedioC").value = pCriterios.toFixed(1);
-    const pFinal = (pCriterios + pObjetivos) / 2;
-    LlamarId("pFinal").value = pFinal.toFixed(1);
+    let pCriterios =
+        (sCriterios / rCriterios.length).toFixed(0).toString() + "%";
+    LlamarId("promedioC").value = pCriterios;
+    const pFinal = (parseInt(pCriterios) + parseInt(pObjetivos)) / 2 + "%";
+    LlamarId("pFinal").value = pFinal;
     /* Alert resultados evaluacion*/
     Swal.fire({
         title: "¿Guardar evaluación?",
@@ -217,43 +220,43 @@ function subir(rCriterios) {
     </tr>
     <tr>
       <td class='d-flex'>Calidad del trabajo:</td>
-      <td>${rCriterios[0].toFixed(1)}</td>
+      <td>${rCriterios[0]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Comunicación:</td>
-      <td>${rCriterios[1].toFixed(1)}</td>
+      <td>${rCriterios[1]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Compromiso:</td>
-      <td>${rCriterios[2].toFixed(1)}</td>
+      <td>${rCriterios[2]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Orientación del cliente:</td>
-      <td>${rCriterios[3].toFixed(1)}</td>
+      <td>${rCriterios[3]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Iniciativa e innovación:</td>
-      <td>${rCriterios[4].toFixed(1)}</td>
+      <td>${rCriterios[4]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Trabajo en equipo y relaciones interpersonales:</td>
-      <td>${rCriterios[5].toFixed(1)}</td>
+      <td>${rCriterios[5]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Liderazgo:</td>
-      <td>${rCriterios[6].toFixed(1)}</td>
+      <td>${rCriterios[6]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Promedio total de los criterios:</td>
-      <td>${pCriterios.toFixed(1)}</td>
+      <td>${pCriterios}</td>
     </tr>
     <tr>
       <td class='d-flex'>Promedio total de los objetivos:</td>
-      <td>${pObjetivos.toFixed(1)}</td>
+      <td>${pObjetivos}</td>
     </tr>
     <tr>
       <td class='pt-3 bold'>Promedio final de la evaluación:</td>
-      <td class='d-flex pt-3 bold'>${pFinal.toFixed(1)}</td>
+      <td class='d-flex pt-3 bold'>${pFinal}</td>
     </tr>
   </table>`,
         footer: `<div class='text-center'>¿Estas seguro que desea guardar esta evaluación? Esta accion no se podra deshacer</div>`,
@@ -292,24 +295,26 @@ var pObjetivos = 0;
 function Calificacion(nPregunta) {
     let nCalificacion = 1;
     let sObjetivos = 0;
+    console.log(sObjetivos);
+    console.log(tObjetivos);
     var Resultado = document.getElementById(`resultado_${nPregunta}`).value;
     var Meta = document.getElementById(`meta_${nPregunta}`).value;
     let Calificacion = Resultado / Meta;
     var TextoC = document.getElementById(`Calificacion_${nPregunta}`);
     //Asignar una ponderacion a los objetivos
-    if (Calificacion >= 1.5) {
+    if (Calificacion >= 0.96) {
         nCalificacion = 5;
         TextoC.style.color = "green";
         TextoC.value = "Excelente";
-    } else if (Calificacion > 1.1) {
+    } else if (Calificacion >= 0.80) {
         nCalificacion = 4;
         TextoC.style.color = "rgb(58, 196, 206)";
         TextoC.value = "Muy bien";
-    } else if (Calificacion >= 1) {
+    } else if (Calificacion >= 0.66) {
         nCalificacion = 3;
         TextoC.style.color = "grey";
         TextoC.value = "Bien";
-    } else if (Calificacion >= 0.7) {
+    } else if (Calificacion >= 0.55) {
         nCalificacion = 2;
         TextoC.style.color = "rgb(182, 182, 0)";
         TextoC.value = "En observación";
@@ -325,9 +330,14 @@ function Calificacion(nPregunta) {
             sObjetivos += tObjetivos[i];
         }
     }
-    pObjetivos = sObjetivos / tObjetivos.length;
+
+    let ppObjetivos = sObjetivos / tObjetivos.length;
+    let pObjetivosFixeado = (ppObjetivos * 2).toFixed(1);
+    pObjetivos = pObjetivosFixeado.toString().split(".").join("") + "%";
+    console.log(pObjetivos);
     LlamarId("pObjetivos").value = pObjetivos;
 }
+
 //Creacion de filas para los objetivos
 var campos = 1;
 var camposE = 0;
@@ -361,7 +371,7 @@ function CrearFila() {
     var inputT = document.createElement("input");
     inputT.setAttribute("type", "text");
     inputT.setAttribute("id", `Objetivo_${campos}`);
-    inputT.setAttribute("maxlength", "10");
+    inputT.setAttribute("maxlength", "35");
     inputT.setAttribute("name", `Objetivo_${campos}`);
     inputT.setAttribute("required", "");
     inputT.setAttribute("class", "form-control");
@@ -519,4 +529,8 @@ const cedulaEncontrada = (capitalizedText) => {
     });
 };
 
-// Ocultar titulo calidad de trabajo
+// Barra de progreso
+
+/* let barraProgreso = document.getElementsByClassName("progress-bar");
+console.log(barraProgreso);
+barraProgreso.setAttribute("style", "width: 100%"); */
