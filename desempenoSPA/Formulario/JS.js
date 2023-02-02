@@ -51,8 +51,7 @@ let progressBarWidth = 0;
 let objCreados = 0;
 function MostrarS(e) {
     if (
-        (pagina * 5 <= document.querySelectorAll("input:checked").length &&
-            document.querySelector("select").value != "") ||
+        pagina * 5 <= document.querySelectorAll("input:checked").length ||
         pagina === 0
     ) {
         pagina++;

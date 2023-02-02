@@ -72,102 +72,6 @@ if (!isset($_SESSION['usuario'])) {
 			<!-- Encuesta -->
 			<input type="number" name="cedulaV" id="cedulaE" hidden>
 			<div id="Pregunta_1" hidden>
-				<div class="d-flex justify-content-evenly p-3">
-					<div class="form-floating">
-						<select name="campaña" class="form-select" id="floatingSelectCampaña" aria-label="Floating label select example" required>
-							<option selected value="">Seleccione una opción por favor</option>
-							<option value='Pay-U'> Pay-U</option>
-							<option value='Gerencia de Planeación'>Gerencia de Planeación</option>
-							<option value='Liberty'>Liberty</option>
-							<option value='Congente'>Congente</option>
-							<option value='Gerencia Administrativa'>Gerencia Administrativa</option>
-							<option value='Yanbal'>Yanbal</option>
-							<option value='Falabella'>Falabella</option>
-							<option value='Credibanco'>Credibanco</option>
-							<option value='Nueva EPS'>Nueva EPS</option>
-							<option value='Claro'>Claro</option>
-							<option value='Avantel'>Avantel</option>
-							<option value='Coomeva'>Coomeva</option>
-							<option value='Azteca'>Azteca</option>
-							<option value='Gerencia de Legal y Riesgo'>Gerencia de Legal y Riesgo</option>
-							<option value='Scotiabank Colpatria'>Scotiabank Colpatria</option>
-							<option value='Banco Agrario'>Banco Agrario</option>
-							<option value='Tecnología'>Tecnología</option>
-							<option value='Dirección de Recursos Físicos'>Dirección de Recursos Físicos</option>
-							<option value='Gerencia Gestión Humana'>Gerencia Gestión Humana</option>
-						</select>
-						<label for="floatingSelectCampaña">Area/campaña del evaluado:</label>
-					</div>
-
-					<div class="form-floating">
-						<select name="cargo" class="form-select" id="floatingSelectCargo" aria-label="Floating label select example" required>
-							<option selected value="">Seleccione una opción por favor</option>
-							<option value='Analista de Aplicaciones de Contact Center'>Analista de Aplicaciones de Contact Center</option>
-							<option value='Analista de BD y Aplicaciones'>Analista de BD y Aplicaciones</option>
-							<option value='Analista de Investigación'>Analista de Investigación</option>
-							<option value='Analista de Saneamiento'>Analista de Saneamiento</option>
-							<option value='Analista de Soporte'>Analista de Soporte</option>
-							<option value='Analista Gestión Humana'>Analista Gestión Humana</option>
-							<option value='Analista Jurídico'>Analista Jurídico</option>
-							<option value='Asesor(a) Comercial'>Asesor(a) Comercial</option>
-							<option value='Asesor(a) de Negociación'>Asesor(a) de Negociación</option>
-							<option value='Asesor(a) de Negociación jr'>Asesor(a) de Negociación jr</option>
-							<option value='Asesor(a) Senior'>Asesor(a) Senior</option>
-							<option value='Auxiliar Administrativo'>Auxiliar Administrativo</option>
-							<option value='Auxiliar de Licitación'>Auxiliar de Licitación</option>
-							<option value='Auxiliar de Recursos Físicos'>Auxiliar de Recursos Físicos</option>
-							<option value='Auxiliar Operativo'>Auxiliar Operativo</option>
-							<option value='Back Office'>Back Office</option>
-							<option value='Coordinador Contable'>Coordinador Contable</option>
-							<option value='Coordinador de Capacitación'>Coordinador de Capacitación</option>
-							<option value='Coordinador(a) BI'>Coordinador(a) BI</option>
-							<option value='Coordinador(a) de BackOffice'>Coordinador(a) de BackOffice</option>
-							<option value='Coordinador(a) de Investigaciones'>Coordinador(a) de Investigaciones</option>
-							<option value='Coordinador(a) de Planeación y Calidad'>Coordinador(a) de Planeación y Calidad</option>
-							<option value='Coordinador(a) de Proyecto'>Coordinador(a) de Proyecto</option>
-							<option value='Data Marshall'>Data Marshall</option>
-							<option value='Director(a) Analitycs'>Director(a) Analitycs</option>
-							<option value='Director(a) de Investigaciones'>Director(a) de Investigaciones</option>
-							<option value='Director(a) de Proyecto'>Director(a) de Proyecto</option>
-							<option value='Director(a) de Recursos Físicos'>Director(a) de Recursos Físicos</option>
-							<option value='Director(a) de SST'>Director(a) de SST</option>
-							<option value='Director(a) Jurídico'>Director(a) Jurídico</option>
-							<option value='Formador'>Formador</option>
-							<option value='Gerente Administrativa'>Gerente Administrativa</option>
-							<option value='Gerente de Control Interno'>Gerente de Control Interno</option>
-							<option value='Gerente de cuentas'>Gerente de cuentas</option>
-							<option value='Gerente de Gestión Humana'>Gerente de Gestión Humana</option>
-							<option value='Gerente de Legal y de Riesgo'>Gerente de Legal y de Riesgo</option>
-							<option value='Gerente de Mercadeo'>Gerente de Mercadeo</option>
-							<option value='Gerente de Operaciones'>Gerente de Operaciones</option>
-							<option value='Gerente de Planeación'>Gerente de Planeación</option>
-							<option value='Gerente de Tecnología'>Gerente de Tecnología</option>
-							<option value='Gerente General'>Gerente General</option>
-							<option value='Gerente Jr Infraestructura y Redes'>Gerente Jr Infraestructura y Redes</option>
-							<option value='Gerente jr. de Aplicaciones de Contact Center'>Gerente jr. de Aplicaciones de Contact Center</option>
-							<option value='Gerente jr. de Mesa de Servicio'>Gerente jr. de Mesa de Servicio</option>
-							<option value='Operador Logístico'>Operador Logístico</option>
-							<option value='Presidente'>Presidente</option>
-							<option value='Sena Lectiva'>Sena Lectiva</option>
-							<option value='Sena Productiva'>Sena Productiva</option>
-							<option value='Servicios Generales'>Servicios Generales</option>
-							<option value='Supernumerario'>Supernumerario</option>
-							<option value='Supervisor(a) de Calidad'>Supervisor(a) de Calidad</option>
-							<option value='en blanco'>en blanco</option>
-						</select>
-						<label for="floatingSelectCargo">Cargo del evaluado:</label>
-					</div>
-
-					<div class="form-floating">
-						<select name="motivoEval" class="form-select" id="floatingSelectMotivo" aria-label="Floating label select example" required>
-							<option selected value="">Seleccione una opción por favor</option>
-							<option value='Semestral'>Semestral</option>
-							<option value="Ascenso">Ascenso</option>
-							<option value="Salario">Aumento de salario</option>
-						</select>
-						<label for="floatingSelectMotivo">Razon de la evaluacion:</label>
-					</div>
-				</div>
 				<div class="row">
 					<div class="row p-3 scroll">Trabaja con altos estándares de calidad y resultados.
 					</div>
@@ -1069,9 +973,6 @@ if (isset($cedulaV)) {
 
 	//Convertir los datos a variables
 	$evaluador = $_SESSION["usuario"];
-	$area_campaña = $_POST['campaña'];
-	$cargo = $_POST['cargo'];
-	$motivoEval = $_POST['motivoEval'];
 	$promedio1 = $_POST["promedio1"];
 	$promedio2 = $_POST["promedio2"];
 	$promedio3 = $_POST["promedio3"];
@@ -1100,7 +1001,7 @@ if (isset($cedulaV)) {
 	}
 	$enviado = false;
 	if (!$enviado) {
-		if ($mysqli->query("INSERT INTO eDesempenoSPA(id,id_evaluador,id_evaluado,fecha,area_campaña, cargo, motivoE,promedio_1,promedio_2,promedio_3,promedio_4,promedio_5,promedio_6,promedioCriterios,objetivo_1,meta_1,rObjetivo_1,ponderacionObjetivo_1,objetivo_2,meta_2,rObjetivo_2,ponderacionObjetivo_2,objetivo_3,meta_3,rObjetivo_3,ponderacionObjetivo_3,objetivo_4,meta_4,rObjetivo_4,ponderacionObjetivo_4,objetivo_5,meta_5,rObjetivo_5,ponderacionObjetivo_5,objetivo_6,meta_6,rObjetivo_6,ponderacionObjetivo_6,objetivo_7,meta_7,rObjetivo_7,ponderacionObjetivo_7,objetivo_8,meta_8,rObjetivo_8,ponderacionObjetivo_8,objetivo_9,meta_9,rObjetivo_9,ponderacionObjetivo_9,objetivo_10,meta_10,rObjetivo_10,ponderacionObjetivo_10,compromisos,desarrolloP,obsEvaluador,obsEvaluado,promedioObjetivos,pFinal) VALUES (NULL,'$evaluador','$cedulaV',NULL,'$area_campaña','$cargo','$motivoEval','$promedio1','$promedio2','$promedio3','$promedio4','$promedio5','$promedio6','$promedioC','$objetivo[1]','$meta[1]','$rObjetivo[1]','$ponderacionObjetivo[1]','$objetivo[2]','$meta[2]','$rObjetivo[2]','$ponderacionObjetivo[2]','$objetivo[3]','$meta[3]','$rObjetivo[3]','$ponderacionObjetivo[3]','$objetivo[4]','$meta[4]','$rObjetivo[4]','$ponderacionObjetivo[4]','$objetivo[5]','$meta[5]','$rObjetivo[5]','$ponderacionObjetivo[5]','$objetivo[6]','$meta[6]','$rObjetivo[6]','$ponderacionObjetivo[6]','$objetivo[7]','$meta[7]','$rObjetivo[7]','$ponderacionObjetivo[7]','$objetivo[8]','$meta[8]','$rObjetivo[8]','$ponderacionObjetivo[8]','$objetivo[9]','$meta[9]','$rObjetivo[9]','$ponderacionObjetivo[9]','$objetivo[10]','$meta[10]','$rObjetivo[10]','$ponderacionObjetivo[10]','$compromisos','$desarrolloP','$obsEvaluador','$obsEvaluado','$pObjetivos','$pFinal')")) {
+		if ($mysqli->query("INSERT INTO eDesempenoSPA(id,id_evaluador,id_evaluado,fecha,promedio_1,promedio_2,promedio_3,promedio_4,promedio_5,promedio_6,promedioCriterios,objetivo_1,meta_1,rObjetivo_1,ponderacionObjetivo_1,objetivo_2,meta_2,rObjetivo_2,ponderacionObjetivo_2,objetivo_3,meta_3,rObjetivo_3,ponderacionObjetivo_3,objetivo_4,meta_4,rObjetivo_4,ponderacionObjetivo_4,objetivo_5,meta_5,rObjetivo_5,ponderacionObjetivo_5,objetivo_6,meta_6,rObjetivo_6,ponderacionObjetivo_6,objetivo_7,meta_7,rObjetivo_7,ponderacionObjetivo_7,objetivo_8,meta_8,rObjetivo_8,ponderacionObjetivo_8,objetivo_9,meta_9,rObjetivo_9,ponderacionObjetivo_9,objetivo_10,meta_10,rObjetivo_10,ponderacionObjetivo_10,compromisos,desarrolloP,obsEvaluador,obsEvaluado,promedioObjetivos,pFinal) VALUES (NULL,'$evaluador','$cedulaV',NULL,'$promedio1','$promedio2','$promedio3','$promedio4','$promedio5','$promedio6','$promedioC','$objetivo[1]','$meta[1]','$rObjetivo[1]','$ponderacionObjetivo[1]','$objetivo[2]','$meta[2]','$rObjetivo[2]','$ponderacionObjetivo[2]','$objetivo[3]','$meta[3]','$rObjetivo[3]','$ponderacionObjetivo[3]','$objetivo[4]','$meta[4]','$rObjetivo[4]','$ponderacionObjetivo[4]','$objetivo[5]','$meta[5]','$rObjetivo[5]','$ponderacionObjetivo[5]','$objetivo[6]','$meta[6]','$rObjetivo[6]','$ponderacionObjetivo[6]','$objetivo[7]','$meta[7]','$rObjetivo[7]','$ponderacionObjetivo[7]','$objetivo[8]','$meta[8]','$rObjetivo[8]','$ponderacionObjetivo[8]','$objetivo[9]','$meta[9]','$rObjetivo[9]','$ponderacionObjetivo[9]','$objetivo[10]','$meta[10]','$rObjetivo[10]','$ponderacionObjetivo[10]','$compromisos','$desarrolloP','$obsEvaluador','$obsEvaluado','$pObjetivos','$pFinal')")) {
 			echo "<script>window.location.replace('./')</script>";
 			die();
 		}
