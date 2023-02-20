@@ -64,17 +64,13 @@ function MostrarS(e) {
             calidadTrabajo.hidden = true;
         }
 
-        // Mostrar sumar barra de progreso
-        progressBarWidth += 11.1;
-        progressBar.setAttribute(
-            "style",
-            `width: ${Math.round(progressBarWidth)}%`
-        );
-        progressBar.innerHTML = `${Math.round(progressBarWidth)}%`;
+        progressBarWidth += 12.5;
+        progressBar.setAttribute("style", `width: ${progressBarWidth}%`);
+        progressBar.innerHTML = `${progressBarWidth}%`;
 
         document.getElementById(`Pregunta_${pagina}`).hidden = false;
         //Colocar required en los radios
-        if (pagina < 9) {
+        if (pagina < 8) {
             for (let i = 1; i < 6; i++) {
                 document
                     .querySelector(
@@ -85,7 +81,7 @@ function MostrarS(e) {
                     `input[type=radio][value="20"][name="${pagina}-${i}"]`
                 );
                 // Checkea todas las secciones para pruebas
-                /* .setAttribute("checked", "") */
+                // .setAttribute("checked", "");
             }
         }
         if (pagina > 1) {
@@ -94,14 +90,14 @@ function MostrarS(e) {
         } else {
             botonA.hidden = true;
         }
-        if (pagina >= 9) {
+        if (pagina >= 8) {
             botonS.hidden = true;
             document.getElementById("Criterios").hidden = true;
         } else {
             botonS.hidden = false;
             document.getElementById("Criterios").hidden = false;
         }
-        if (pagina === 9 && objCreados === 0) {
+        if (pagina === 8 && objCreados === 0) {
             CrearFila();
             let textA = document.querySelectorAll("textarea");
             for (let i = 0; i < textA.length; i++) {
@@ -111,6 +107,7 @@ function MostrarS(e) {
         }
     }
 }
+
 function MostrarA(e) {
     e.preventDefault();
     pagina--;
@@ -120,13 +117,9 @@ function MostrarA(e) {
         calidadTrabajo.hidden = false;
     }
 
-    // Mostrar restar barra de progreso
-    progressBarWidth -= 11.1;
-    progressBar.setAttribute(
-        "style",
-        `width: ${Math.round(progressBarWidth)}%`
-    );
-    progressBar.innerHTML = `${Math.round(progressBarWidth)}%`;
+    progressBarWidth -= 12.5;
+    progressBar.setAttribute("style", `width: ${progressBarWidth}%`);
+    progressBar.innerHTML = `${progressBarWidth}%`;
 
     document.getElementById(`Pregunta_${pagina}`).hidden = false;
     document.getElementById(`Pregunta_${pagina + 1}`).hidden = true;
@@ -135,7 +128,7 @@ function MostrarA(e) {
     } else {
         botonA.hidden = true;
     }
-    if (pagina < 9) {
+    if (pagina < 8) {
         document.getElementById("Criterios").hidden = false;
         botonS.hidden = false;
     }
@@ -189,6 +182,7 @@ function Promediar(e) {
                 promedioT + "%";
             rCriterios.push(Promedio.toString() + "%");
             Respuestas = [];
+            console.log(rCriterios);
         }
     }
     //Validar que todos los campos esten llenos
@@ -200,14 +194,12 @@ function Promediar(e) {
                 valido = false;
             }
         }
-
         let textObjetivos = document.querySelectorAll("input[type=text]");
         for (let i = 0; i < textObjetivos.length; i++) {
             if (textObjetivos[i].value === "") {
                 valido = false;
             }
         }
-
         for (let i = 1; i < campos; i++) {
             console.log(document.getElementById("Calificacion_" + i).value);
             if (
@@ -234,12 +226,10 @@ function subir(rCriterios) {
     let sCriterios = 0;
     rCriterios.forEach((element) => {
         sCriterios += parseInt(element);
+        console.log(sCriterios);
     });
     let pCriterios =
         Math.round(sCriterios / rCriterios.length).toString() + "%";
-    console.log(pCriterios);
-    console.log(rCriterios);
-    console.log(rCriterios.length);
     LlamarId("promedioC").value = pCriterios;
     const pFinal =
         Math.round((parseInt(pCriterios) + parseInt(pObjetivos)) / 2) + "%";
@@ -255,7 +245,7 @@ function subir(rCriterios) {
       <th>Promedios</th>
     </tr>
     <tr>
-      <td class='d-flex'>Pensamiento y planificación estrategica</td>
+      <td class='d-flex'>Calidad del trabajo:</td>
       <td>${rCriterios[0]}</td>
     </tr>
     <tr>
@@ -271,7 +261,7 @@ function subir(rCriterios) {
       <td>${rCriterios[3]}</td>
     </tr>
     <tr>
-      <td class='d-flex'>Toma de desiciones:</td>
+      <td class='d-flex'>Iniciativa e innovación:</td>
       <td>${rCriterios[4]}</td>
     </tr>
     <tr>
@@ -281,10 +271,6 @@ function subir(rCriterios) {
     <tr>
       <td class='d-flex'>Liderazgo:</td>
       <td>${rCriterios[6]}</td>
-    </tr>
-    <tr>
-      <td class='d-flex'>Capacidad de analisis y gestión:</td>
-      <td>${rCriterios[7]}</td>
     </tr>
     <tr>
       <td class='d-flex'>Promedio total de los criterios:</td>
@@ -356,7 +342,6 @@ function Calificacion(nPregunta) {
         TextoC.value = Calificacion + "%";
     }
     tObjetivos[nPregunta - 1] = parseFloat(Calificacion);
-
     for (let i = 0; i < tObjetivos.length; i++) {
         if (tObjetivos[i] !== undefined) {
             sObjetivos += tObjetivos[i];
@@ -535,7 +520,7 @@ function CrearFila() {
 function FormularioPHP() {
     let form = Crear("form");
     let input = Crear("input");
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 8; i++) {
         input.setAttribute("id", `input_${i}`);
     }
 }
@@ -560,3 +545,6 @@ const cedulaEncontrada = (capitalizedText) => {
         title: `Evaluando a: \n ${capitalizedText}`,
     });
 };
+
+//Borrar
+/* document.getElementById('agUser').onsubmit(() =>{return false}) */

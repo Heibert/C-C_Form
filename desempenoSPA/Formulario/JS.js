@@ -49,9 +49,13 @@ let progressBarWidth = 0;
 
 //Mostrar la seccion de pregunta
 let objCreados = 0;
+let selects = document.getElementsByTagName("select");
+
 function MostrarS(e) {
     if (
-        pagina * 5 <= document.querySelectorAll("input:checked").length ||
+        (pagina * 5 <= document.querySelectorAll("input:checked").length &&
+            selects[0].value != "" &&
+            selects[1].value != "") ||
         pagina === 0
     ) {
         pagina++;
@@ -81,10 +85,9 @@ function MostrarS(e) {
                     `input[type=radio][value="20"][name="${pagina}-${i}"]`
                 );
                 // Checkea todas las secciones para pruebas
-                // .setAttribute("checked", "");
+                /* .setAttribute("checked", "") */
             }
         }
-        console.log(pagina);
         if (pagina > 1) {
             document.getElementById(`Pregunta_${pagina - 1}`).hidden = true;
             botonA.hidden = false;
@@ -203,6 +206,16 @@ function Promediar(e) {
                 valido = false;
             }
         }
+        for (let i = 1; i < campos; i++) {
+            console.log(document.getElementById("Calificacion_" + i).value);
+            if (
+                document.getElementById("Calificacion_" + i).value ===
+                    "Infinity%" ||
+                document.getElementById("Calificacion_" + i).value === "NaN%"
+            ) {
+                valido = false;
+            }
+        }
         if (valido) {
             subir(rCriterios);
         }
@@ -309,24 +322,24 @@ function Calificacion(nPregunta) {
     let sObjetivos = 0;
     var Resultado = document.getElementById(`resultado_${nPregunta}`).value;
     var Meta = document.getElementById(`meta_${nPregunta}`).value;
-    let Calificacion = Resultado / Meta;
+    let Calificacion = Math.round((Resultado / Meta) * 100);
     var TextoC = document.getElementById(`Calificacion_${nPregunta}`);
     //Asignar una ponderacion a los objetivos
-    if (Calificacion >= 0.96) {
+    if (Calificacion >= 96) {
         TextoC.style.color = "green";
-        TextoC.value = "Excelente";
-    } else if (Calificacion >= 0.8) {
+        TextoC.value = Calificacion + "%";
+    } else if (Calificacion >= 80) {
         TextoC.style.color = "rgb(58, 196, 206)";
-        TextoC.value = "Muy bien";
-    } else if (Calificacion >= 0.66) {
+        TextoC.value = Calificacion + "%";
+    } else if (Calificacion >= 66) {
         TextoC.style.color = "grey";
-        TextoC.value = "Bien";
-    } else if (Calificacion >= 0.55) {
+        TextoC.value = Calificacion + "%";
+    } else if (Calificacion >= 55) {
         TextoC.style.color = "rgb(182, 182, 0)";
-        TextoC.value = "En observación";
+        TextoC.value = Calificacion + "%";
     } else {
         TextoC.style.color = "red";
-        TextoC.value = "Insuficiente";
+        TextoC.value = Calificacion + "%";
     }
     tObjetivos[nPregunta - 1] = parseFloat(Calificacion);
     for (let i = 0; i < tObjetivos.length; i++) {
@@ -336,8 +349,7 @@ function Calificacion(nPregunta) {
     }
 
     let ppObjetivos = sObjetivos / tObjetivos.length;
-    let pObjetivosFixeado = Math.round(ppObjetivos * 100);
-    pObjetivos = pObjetivosFixeado.toString() + "%";
+    pObjetivos = Math.round(ppObjetivos) + "%";
     LlamarId("pObjetivos").value = pObjetivos;
 }
 
@@ -413,6 +425,7 @@ function CrearFila() {
     //input de calificacion
     var divC = document.createElement("div");
     divC.setAttribute("class", "col");
+    divC.classList.add("d-flex");
     let inputC = Crear("input");
     inputC.setAttribute("class", "calificacion");
     inputC.setAttribute("id", `Calificacion_${campos}`);
@@ -420,6 +433,7 @@ function CrearFila() {
     inputC.setAttribute("type", "text");
     inputC.setAttribute("readonly", "");
     inputC.setAttribute("autocomplete", "off");
+    inputC.classList.add("text-center");
     Colocar(divC, inputC);
     nFila.append(divC);
     Fila.append(nFila);

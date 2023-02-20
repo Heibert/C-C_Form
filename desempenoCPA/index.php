@@ -44,7 +44,7 @@ if (!isset($_SESSION['usuario'])) {
 			<img class="text-center p-3" src="./Formulario/Assets/logotipo_h®.png" alt="Logo corporativo" width="20%">
 		</div>
 		<div class="text-center p-3">
-			<h3>EVALUACIÓN DE DESEMPEÑO LABORAL SIN PERSONAL A CARGO</h3>
+			<h3>EVALUACIÓN DE DESEMPEÑO LABORAL CON PERSONAL A CARGO</h3>
 		</div>
 
 		<div class="text-center" id='criteriosTitulo' hidden>
@@ -162,7 +162,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3 scroll">Trabaja con altos estándares de calidad y resultados.
+					<div class="row p-3 scroll">Supervisa y corrige el trabajo del equipo, anticipándose ante errores o fallas.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="1-1" class="pointer form-check-input" type="radio" id="Encuesta_1" value='20'>
@@ -189,7 +189,9 @@ if (!isset($_SESSION['usuario'])) {
 				</div>
 				<div id="creacionPregunta"></div>
 				<div class="row">
-					<div class="row p-3">Conoce ampliamente los temas relacionados a su especialidad.</div>
+					<div class="row p-3">Posee amplios conocimientos del mercado, el negocio, su área y lo comparte con
+						su
+						equipo.</div>
 					<div class="row-1 d-flex">
 						<input name="1-2" class="pointer form-check-input" type="radio" id="Encuesta_6" value='20'>
 						<label for='Encuesta_6' class="pointer ps-3">Insuficiente</label>
@@ -212,7 +214,8 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Cumple satisfactoriamente con los objetivos de su área, aun en situaciones de presión.
+					<div class="row p-3">Elabora e implementa soluciones prácticas y operables en pro del logro de los
+						objetivos.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="1-3" class="pointer form-check-input" type="radio" id="Encuesta_11" value='20'>
@@ -236,7 +239,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Elabora propuestas para mejorar y optimizar sus métodos de trabajo.
+					<div class="row p-3">Sus reportes, trabajos y proyectos se destacan por ser impecables.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="1-4" class="pointer form-check-input" type="radio" id="Encuesta_16" value='20'>
@@ -260,7 +263,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Cumple con su trabajo a tiempo por encima de los obstáculos y dificultades que se le presentan.
+					<div class="row p-3">Realiza constantes propuestas de mejoramiento.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="1-5" class="pointer form-check-input" type="radio" id="Encuesta_21" value='20'>
@@ -291,7 +294,8 @@ if (!isset($_SESSION['usuario'])) {
 			<div id="Pregunta_2" hidden>
 				<div class="h5 centro">COMUNICACION</div>
 				<div class="row">
-					<div class="row p-3 scroll">Escucha a los demás con empatía ocupándose en entender sus puntos de vista.</div>
+					<div class="row p-3 scroll">Comparte información relevante con sus colaboradores y con otras áreas de la
+						organización.</div>
 					<div class="row-1 d-flex">
 						<input name="2-1" class="pointer form-check-input" type="radio" id="Encuesta_26" value='20'>
 						<label for='Encuesta_26' class="pointer ps-3">Insuficiente</label>
@@ -314,7 +318,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Trata con respeto a sus compañeros y clientes.
+					<div class="row p-3">Escucha a los demás con empatía ocupándose en entender sus puntos de vista.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="2-2" class="pointer form-check-input" type="radio" id="Encuesta_31" value='20'>
@@ -338,7 +342,9 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Maneja las reglas adecuadas del lenguaje, gramática y sintaxis para transmitir sus ideas.</div>
+					<div class="row p-3">Ofrece retroalimentación para ayudar a sus colaboradores y pares a actuar de
+						forma
+						exitosa.</div>
 					<div class="row-1 d-flex">
 						<input name="2-3" class="pointer form-check-input" type="radio" id="Encuesta_36" value='20'>
 						<label for='Encuesta_36' class="pointer ps-3">Insuficiente</label>
@@ -361,7 +367,10 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Comunica sus ideas de forma clara, eficiente y fluida, logrando que sea entendido el mensaje.</div>
+					<div class="row p-3">Tiene influencia sobre los demás para cambiar sus ideas y acciones, basándose
+						en
+						aportes
+						positivos.</div>
 					<div class="row-1 d-flex">
 						<input name="2-4" class="pointer form-check-input" type="radio" id="Encuesta_41" value='20'>
 						<label for='Encuesta_41' class="pointer ps-3">Insuficiente</label>
@@ -384,7 +393,9 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Participa activamente en reuniones y expresa sus opiniones.</div>
+					<div class="row p-3">Maneja las reglas adecuadas del lenguaje, gramática y sintaxis para transmitir
+						sus
+						ideas.</div>
 					<div class="row-1 d-flex">
 						<input name="2-5" class="pointer form-check-input" type="radio" id="Encuesta_46" value='20'>
 						<label for='Encuesta_46' class="pointer ps-3">Insuficiente</label>
@@ -414,7 +425,7 @@ if (!isset($_SESSION['usuario'])) {
 			<div id="Pregunta_3" hidden>
 				<div class="h5 centro">COMPROMISO</div>
 				<div class="row">
-					<div class="row p-3 scroll">Se observa compromiso y sentido de pertenencia por la organización</div>
+					<div class="row p-3 scroll">Monitorea el logro de los objetivos e implementa acciones correctivas.</div>
 					<div class="row-1 d-flex">
 						<input name="3-1" class="pointer form-check-input" type="radio" id="Encuesta_51" value='20'>
 						<label for='Encuesta_51' class="pointer ps-3">Insuficiente</label>
@@ -437,7 +448,9 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Demuestra entusiasmo y disposición hacia el trabajo.</div>
+					<div class="row p-3">Define y se identifica claramente con la visión de la organización y la
+						transmite a
+						su equipo</div>
 					<div class="row-1 d-flex">
 						<input name="3-2" class="pointer form-check-input" type="radio" id="Encuesta_56" value='20'>
 						<label for='Encuesta_56' class="pointer ps-3">Insuficiente</label>
@@ -460,7 +473,8 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Escucha opiniones sobre su desempeño y corrige su accionar.
+					<div class="row p-3">Transmite a pares y supervisados los objetivos, generando compromiso e
+						identificación
 					</div>
 					<div class="row-1 d-flex">
 						<input name="3-3" class="pointer form-check-input" type="radio" id="Encuesta_61" value='20'>
@@ -484,7 +498,8 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Se siente responsable por el logro de los resultados que se esperan de él.</div>
+					<div class="row p-3">Reconoce el esfuerzo de sus colaboradores, a fin de mantener la motivación y el
+						compromiso</div>
 					<div class="row-1 d-flex">
 						<input name="3-4" class="pointer form-check-input" type="radio" id="Encuesta_66" value='20'>
 						<label for='Encuesta_66' class="pointer ps-3">Insuficiente</label>
@@ -560,7 +575,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Comprende que el cliente es fundamental para la organización y actúa en consecuencia.
+					<div class="row p-3">Indaga y se informa sobre necesidades actuales y potenciales de sus clientes.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="4-2" class="pointer form-check-input" type="radio" id="Encuesta_81" value='20'>
@@ -584,7 +599,8 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Esta siempre disponible para los clientes y dispuesto a ofrecer un excelente servicio.
+					<div class="row p-3">Planifica sus acciones y las de su equipo considerando las necesidades de los
+						clientes.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="4-3" class="pointer form-check-input" type="radio" id="Encuesta_86" value='20'>
@@ -608,7 +624,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Aporta soluciones para satisfacer las necesidades de clientes.</div>
+					<div class="row p-3">Genera ambientes y procesos de trabajo que cuidan y atienden al cliente.</div>
 					<div class="row-1 d-flex">
 						<input name="4-4" class="pointer form-check-input" type="radio" id="Encuesta_91" value='20'>
 						<label for='Encuesta_91' class="pointer ps-3">Insuficiente</label>
@@ -631,7 +647,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Mantiene una actitud de servicio frente a sus clientes.</div>
+					<div class="row p-3">Se esfuerza por ofrecer un excelente servicio.</div>
 					<div class="row-1 d-flex">
 						<input name="4-5" class="pointer form-check-input" type="radio" id="Encuesta_96" value='20'>
 						<label for='Encuesta_96' class="pointer ps-3">Insuficiente</label>
@@ -661,7 +677,8 @@ if (!isset($_SESSION['usuario'])) {
 			<div id="Pregunta_5" hidden>
 				<div class="h5 centro">INICIATIVA E INNOVACIÓN</div>
 				<div class="row">
-					<div class="row p-3 scroll">Manifiesta distintos enfoques y soluciones para enfrentar un problema.
+					<div class="row p-3 scroll">Es participativo, aporta ideas y estimula a su gente para que actúe de la misma
+						forma.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="5-1" class="pointer form-check-input" type="radio" id="Encuesta_100" value='20'>
@@ -685,7 +702,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Tiene una respuesta ágil frente a los cambios o eventos inesperados.
+					<div class="row p-3">Da ejemplo con su actitud y toma iniciativas para la mejora y la eficiencia.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="5-2" class="pointer form-check-input" type="radio" id="Encuesta_105" value='20'>
@@ -709,7 +726,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Se siente motivado ante situaciones que requieren un nuevo enfoque.</div>
+					<div class="row p-3">Idea y lleva a cabo soluciones novedosas para resolver problemas.</div>
 					<div class="row-1 d-flex">
 						<input name="5-3" class="pointer form-check-input" type="radio" id="Encuesta_110" value='20'>
 						<label for='Encuesta_110' class="pointer ps-3">Insuficiente</label>
@@ -732,7 +749,8 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Propone mejoras para su área de manera espontanea.</div>
+					<div class="row p-3">Le gusta estar informado y aprender para aplicar estos conocimientos si tiene
+						oportunidad.</div>
 					<div class="row-1 d-flex">
 						<input name="5-4" class="pointer form-check-input" type="radio" id="Encuesta_115" value='20'>
 						<label for='Encuesta_115' class="pointer ps-3">Insuficiente</label>
@@ -755,7 +773,8 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Muestra interés para solucionar los errores cometidos por el o por sus compañeros.
+					<div class="row p-3">Muestra interés para solucionar los errores cometidos por el o por sus
+						compañeros.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="5-5" class="pointer form-check-input" type="radio" id="Encuesta_120" value='20'>
@@ -786,7 +805,8 @@ if (!isset($_SESSION['usuario'])) {
 			<div id="Pregunta_6" hidden>
 				<div class="h5 centro">TRABAJO EN EQUIPO Y RELACIONES INTERPERSONALES</div>
 				<div class="row">
-					<div class="row p-3">Participa con entusiasmo en el equipo y busca acuerdos de mutuo beneficio.
+					<div class="row p-3">Actúa para generar un ambiente de trabajo amistoso, de buen clima y
+						cooperación.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="6-1" class="pointer form-check-input" type="radio" id="Encuesta_125" value='20'>
@@ -810,7 +830,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Valora y respeta las ideas y experiencias ajenas.</div>
+					<div class="row p-3">Valora y promueve el trabajo en equipo.</div>
 					<div class="row-1 d-flex">
 						<input name="6-2" class="pointer form-check-input" type="radio" id="Encuesta_130" value='20'>
 						<label for='Encuesta_130' class="pointer ps-3">Insuficiente</label>
@@ -833,7 +853,10 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Apoya las decisiones de su equipo.</div>
+					<div class="row p-3">Implementa modalidades alternativas de trabajo en equipo, a fin de añadir valor
+						a
+						los
+						resultados.</div>
 					<div class="row-1 d-flex">
 						<input name="6-3" class="pointer form-check-input" type="radio" id="Encuesta_135" value='20'>
 						<label for='Encuesta_135' class="pointer ps-3">Insuficiente</label>
@@ -856,7 +879,9 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Se relaciona de manera cordial, mostrando motivación y empatía para el trabajo en equipo.
+					<div class="row p-3">Logra la cooperación de las personas involucradas directa o indirectamente con
+						su
+						área.
 					</div>
 					<div class="row-1 d-flex">
 						<input name="6-4" class="pointer form-check-input" type="radio" id="Encuesta_140" value='20'>
@@ -880,7 +905,7 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 				</div>
 				<div class="row">
-					<div class="row p-3">Esta orientado al logro de los objetivos grupales.</div>
+					<div class="row p-3">Motiva al equipo a integrar sus ideas y llegar a consensos.</div>
 					<div class="row-1 d-flex">
 						<input name="6-5" class="pointer form-check-input" type="radio" id="Encuesta_145" value='20'>
 						<label for='Encuesta_145' class="pointer ps-3">Insuficiente</label>
@@ -905,16 +930,140 @@ if (!isset($_SESSION['usuario'])) {
 				<div class="row" hidden>
 					<input readonly name="promedio6" class="centro" id="Promedio6"><!-- Aqui va el promedio --></input>
 				</div>
-
 			</div>
-
-			<div class="row" hidden>
-				<input name="promedioC" id="promedioC" hidden>
-				<input name="pObjetivos" id="pObjetivos" hidden>
-				<input name="pFinal" id="pFinal" hidden>
-			</div>
-
+			<!-- 7ma ronda de preguntas -->
 			<div id="Pregunta_7" hidden>
+				<div class="h5 centro">LIDERAZGO</div>
+				<div class="row">
+					<div class="row p-3">Hace uso de su autoridad de forma justa y equitativa.
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-1" class="pointer form-check-input" type="radio" id="Encuesta_150" value='20'>
+						<label for='Encuesta_150' class="pointer ps-3">Insuficiente</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-1" class="pointer form-check-input" type="radio" id="Encuesta_151" value="40">
+						<label for='Encuesta_151' class="pointer ps-3">En observacion</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-1" class="pointer form-check-input" type="radio" id="Encuesta_152" value="60">
+						<label for='Encuesta_152' class="pointer ps-3">Bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-1" class="pointer form-check-input" type="radio" id="Encuesta_153" value="80">
+						<label for='Encuesta_153' class="pointer ps-3">Muy bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-1" class="pointer form-check-input" type="radio" id="Encuesta_154" value="100">
+						<label for='Encuesta_154' class="pointer ps-3">Excelente</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row p-3">Reconoce a los empleados con potencial, creando oportunidades para ellos.</div>
+					<div class="row-1 d-flex">
+						<input name="7-2" class="pointer form-check-input" type="radio" id="Encuesta_155" value='20'>
+						<label for='Encuesta_155' class="pointer ps-3">Insuficiente</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-2" class="pointer form-check-input" type="radio" id="Encuesta_156" value="40">
+						<label for='Encuesta_156' class="pointer ps-3">En observacion</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-2" class="pointer form-check-input" type="radio" id="Encuesta_157" value="60">
+						<label for='Encuesta_157' class="pointer ps-3">Bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-2" class="pointer form-check-input" type="radio" id="Encuesta_158" value="80">
+						<label for='Encuesta_158' class="pointer ps-3">Muy bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-2" class="pointer form-check-input" type="radio" id="Encuesta_159" value="100">
+						<label for='Encuesta_159' class="pointer ps-3">Excelente</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row p-3">Realiza un apropiado seguimiento de las tareas, brindando feedback a sus
+						colaboradores.
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-3" class="pointer form-check-input" type="radio" id="Encuesta_160" value='20'>
+						<label for='Encuesta_160' class="pointer ps-3">Insuficiente</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-3" class="pointer form-check-input" type="radio" id="Encuesta_161" value="40">
+						<label for='Encuesta_161' class="pointer ps-3">En observacion</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-3" class="pointer form-check-input" type="radio" id="Encuesta_162" value="60">
+						<label for='Encuesta_162' class="pointer ps-3">Bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-3" class="pointer form-check-input" type="radio" id="Encuesta_163" value="80">
+						<label for='Encuesta_163' class="pointer ps-3">Muy bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-3" class="pointer form-check-input" type="radio" id="Encuesta_164" value="100">
+						<label for='Encuesta_164' class="pointer ps-3">Excelente</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row p-3">Motiva y establece un clima de confianza, generando entusiasmo y compromiso en
+						su
+						equipo.
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-4" class="pointer form-check-input" type="radio" id="Encuesta_165" value='20'>
+						<label for='Encuesta_165' class="pointer ps-3">Insuficiente</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-4" class="pointer form-check-input" type="radio" id="Encuesta_166" value="40">
+						<label for='Encuesta_166' class="pointer ps-3">En observacion</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-4" class="pointer form-check-input" type="radio" id="Encuesta_167" value="60">
+						<label for='Encuesta_167' class="pointer ps-3">Bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-4" class="pointer form-check-input" type="radio" id="Encuesta_168" value="80">
+						<label for='Encuesta_168' class="pointer ps-3">Muy bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-4" class="pointer form-check-input" type="radio" id="Encuesta_169" value="100">
+						<label for='Encuesta_169' class="pointer ps-3">Excelente</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row p-3">Guía de manera efectiva al equipo de trabajo para cumplir con los objetivos.
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-5" class="pointer form-check-input" type="radio" id="Encuesta_170" value='20'>
+						<label for='Encuesta_170' class="pointer ps-3">Insuficiente</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-5" class="pointer form-check-input" type="radio" id="Encuesta_171" value="40">
+						<label for='Encuesta_171' class="pointer ps-3">En observacion</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-5" class="pointer form-check-input" type="radio" id="Encuesta_172" value="60">
+						<label for='Encuesta_172' class="pointer ps-3">Bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-5" class="pointer form-check-input" type="radio" id="Encuesta_173" value="80">
+						<label for='Encuesta_173' class="pointer ps-3">Muy bueno</label>
+					</div>
+					<div class="row-1 d-flex">
+						<input name="7-5" class="pointer form-check-input" type="radio" id="Encuesta_174" value="100">
+						<label for='Encuesta_174' class="pointer ps-3">Excelente</label>
+					</div>
+				</div>
+				<div class="row" hidden>
+					<input readonly name="promedio7" class="centro" id="Promedio7"><!-- Aqui va el promedio --></input>
+					<input name="promedioC" id="promedioC" hidden>
+					<input name="pObjetivos" id="pObjetivos" hidden>
+					<input name="pFinal" id="pFinal" hidden>
+				</div>
+			</div>
+			<div id="Pregunta_8" hidden>
 				<div class="centro h4"> EVALUACIÓN DE OBJETIVOS (50%)</div>
 				<div class="row">
 					<div class="col-5 text-center">DESCRIPCIÓN DE OBJETIVOS</div>
@@ -1057,9 +1206,7 @@ if (isset($_POST["cedula"]) && $_POST["cedula"] != "") {
 }
 //Subir los datos
 if (isset($cedulaV)) {
-
 	mysqli_set_charset($mysqli, 'utf8mb4');
-
 	//Convertir los datos a variables
 	$evaluador = $_SESSION["usuario"];
 	$campaña = $_POST["campaña"];
@@ -1070,6 +1217,7 @@ if (isset($cedulaV)) {
 	$promedio4 = $_POST["promedio4"];
 	$promedio5 = $_POST["promedio5"];
 	$promedio6 = $_POST["promedio6"];
+	$promedio7 = $_POST["promedio7"];
 	$promedioC = $_POST["promedioC"];
 	$pObjetivos = $_POST["pObjetivos"];
 	$compromisos = $_POST["compromisos"];
@@ -1091,11 +1239,12 @@ if (isset($cedulaV)) {
 		}
 	}
 	$enviado = false;
+
 	if (!$enviado) {
 
-		$stmt = $mysqli->prepare("INSERT INTO eDesempenoSPA(id_evaluador,id_evaluado,campaña,cargo,promedio_1,promedio_2,promedio_3,promedio_4,promedio_5,promedio_6,promedioCriterios,objetivo_1,meta_1,rObjetivo_1,ponderacionObjetivo_1,objetivo_2,meta_2,rObjetivo_2,ponderacionObjetivo_2,objetivo_3,meta_3,rObjetivo_3,ponderacionObjetivo_3,objetivo_4,meta_4,rObjetivo_4,ponderacionObjetivo_4,objetivo_5,meta_5,rObjetivo_5,ponderacionObjetivo_5,objetivo_6,meta_6,rObjetivo_6,ponderacionObjetivo_6,objetivo_7,meta_7,rObjetivo_7,ponderacionObjetivo_7,objetivo_8,meta_8,rObjetivo_8,ponderacionObjetivo_8,objetivo_9,meta_9,rObjetivo_9,ponderacionObjetivo_9,objetivo_10,meta_10,rObjetivo_10,ponderacionObjetivo_10,compromisos,desarrolloP,obsEvaluador,obsEvaluado,promedioObjetivos,pFinal) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$stmt = $mysqli->prepare("INSERT INTO eDesempenoCPA(id_evaluador,id_evaluado,campaña,cargo,promedio_1,promedio_2,promedio_3,promedio_4,promedio_5,promedio_6,promedio_7,promedioCriterios,objetivo_1,meta_1,rObjetivo_1,ponderacionObjetivo_1,objetivo_2,meta_2,rObjetivo_2,ponderacionObjetivo_2,objetivo_3,meta_3,rObjetivo_3,ponderacionObjetivo_3,objetivo_4,meta_4,rObjetivo_4,ponderacionObjetivo_4,objetivo_5,meta_5,rObjetivo_5,ponderacionObjetivo_5,objetivo_6,meta_6,rObjetivo_6,ponderacionObjetivo_6,objetivo_7,meta_7,rObjetivo_7,ponderacionObjetivo_7,objetivo_8,meta_8,rObjetivo_8,ponderacionObjetivo_8,objetivo_9,meta_9,rObjetivo_9,ponderacionObjetivo_9,objetivo_10,meta_10,rObjetivo_10,ponderacionObjetivo_10,compromisos,desarrolloP,obsEvaluador,obsEvaluado,promedioObjetivos,pFinal) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-		$stmt->bind_param("iissssssssssiissiissiissiissiissiissiissiissiissiisssssss", $evaluador, $cedulaV, $campaña, $cargo, $promedio1, $promedio2, $promedio3, $promedio4, $promedio5, $promedio6, $promedioC, $objetivo[1], $meta[1], $rObjetivo[1], $ponderacionObjetivo[1], $objetivo[2], $meta[2], $rObjetivo[2], $ponderacionObjetivo[2], $objetivo[3], $meta[3], $rObjetivo[3], $ponderacionObjetivo[3], $objetivo[4], $meta[4], $rObjetivo[4], $ponderacionObjetivo[4], $objetivo[5], $meta[5], $rObjetivo[5], $ponderacionObjetivo[5], $objetivo[6], $meta[6], $rObjetivo[6], $ponderacionObjetivo[6], $objetivo[7], $meta[7], $rObjetivo[7], $ponderacionObjetivo[7], $objetivo[8], $meta[8], $rObjetivo[8], $ponderacionObjetivo[8], $objetivo[9], $meta[9], $rObjetivo[9], $ponderacionObjetivo[9], $objetivo[10], $meta[10], $rObjetivo[10], $ponderacionObjetivo[10], $compromisos, $desarrolloP, $obsEvaluador, $obsEvaluado, $pObjetivos, $pFinal);
+		$stmt->bind_param("iisssssssssssiissiissiissiissiissiissiissiissiissiisssssss", $evaluador, $cedulaV, $campaña, $cargo, $promedio1, $promedio2, $promedio3, $promedio4, $promedio5, $promedio6, $promedio7, $promedioC, $objetivo[1], $meta[1], $rObjetivo[1], $ponderacionObjetivo[1], $objetivo[2], $meta[2], $rObjetivo[2], $ponderacionObjetivo[2], $objetivo[3], $meta[3], $rObjetivo[3], $ponderacionObjetivo[3], $objetivo[4], $meta[4], $rObjetivo[4], $ponderacionObjetivo[4], $objetivo[5], $meta[5], $rObjetivo[5], $ponderacionObjetivo[5], $objetivo[6], $meta[6], $rObjetivo[6], $ponderacionObjetivo[6], $objetivo[7], $meta[7], $rObjetivo[7], $ponderacionObjetivo[7], $objetivo[8], $meta[8], $rObjetivo[8], $ponderacionObjetivo[8], $objetivo[9], $meta[9], $rObjetivo[9], $ponderacionObjetivo[9], $objetivo[10], $meta[10], $rObjetivo[10], $ponderacionObjetivo[10], $compromisos, $desarrolloP, $obsEvaluador, $obsEvaluado, $pObjetivos, $pFinal);
 
 		if ($stmt->execute()) {
 			echo "<script>window.location.replace('./')</script>";
